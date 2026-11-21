@@ -1,0 +1,12 @@
+# originais pesados (a página usa só as versões otimizadas em assets/fotos)
+assets/*.zip
+assets/*.png
+!assets/logo-ajuste-certo-giz.png
+assets/*.jpg
+assets/*.webp
+assets/Certificado*
+# atalhos e lixo do sistema
+*.lnk
+Thumbs.db
+desktop.ini
+.DS_Store
