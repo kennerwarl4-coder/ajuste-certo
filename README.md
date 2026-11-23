@@ -1,6 +1,6 @@
 # Ajuste Certo
 
-Página de vendas da apostila **Ajuste Certo**: guia ilustrado de consertos em roupa pronta na máquina de costura doméstica (Sequência M.A.C.: Medir, Alfinetar, Costurar).
+Página de vendas da apostila **Ajuste Certo**: guia ilustrado de consertos e ajustes em roupa pronta para geração de renda extra na máquina de costura doméstica (Sequência M.A.C.: Medir, Alfinetar, Costurar).
 
 ## Estrutura
 
