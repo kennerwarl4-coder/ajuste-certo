@@ -1,6 +1,6 @@
 # Ajuste Certo
 
-Página de vendas da apostila **Ajuste Certo**: guia ilustrado de consertos e ajustes em roupa pronta para geração de renda extra na máquina de costura doméstica (Sequência M.A.C.: Medir, Alfinetar, Costurar).
+Página de vendas do **Ajuste Certo**: método completo para abrir um negócio de consertos e ajustes em roupa pronta na máquina de costura doméstica (Especialização nos 18 consertos mais lucrativos + Sequência M.A.C. + Kit de Aceleração com Instagram, WhatsApp e Divulgação Silenciosa para faturar de R$ 4.300 a R$ 6.700/mês).
 
 ## Estrutura
 
