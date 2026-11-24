@@ -146,46 +146,21 @@ main{overflow-x:clip}
 .nota-giz{position:relative;display:block;margin:20px 0 0 auto;width:max-content;max-width:100%;text-align:right;white-space:nowrap;font-size:clamp(21px,6.6vw,28px)}
 .nota-giz svg{position:absolute;left:-46px;top:-26px;width:44px;height:36px;color:var(--giz)}
 
-/* ============ 2. FAIXA DE PROVA: fita métrica ============ */
-.prova{padding:28px 0 64px}
-.prova h2{font-size:clamp(26px,6.4vw,38px);margin-bottom:22px}
-.regua{position:relative;height:calc(var(--cm) * 21 + 20px)}
-.trena{
-  position:absolute;left:0;top:0;width:54px;height:calc(var(--cm) * 21);
-  background:
-    repeating-linear-gradient(to bottom,var(--tinta) 0 1.5px,transparent 1.5px var(--cm)) 0 0/20px 100% no-repeat,
-    repeating-linear-gradient(to bottom,var(--tinta) 0 1px,transparent 1px calc(var(--cm) / 2)) 0 0/11px 100% no-repeat,
-    var(--fita);
-  border-radius:2px;box-shadow:0 6px 14px rgba(0,0,0,.3);
+/* ============ SEQUÊNCIA M.A.C. COMPACTA ============ */
+.mac-resumo{
+  background:var(--papel);color:var(--tinta);padding:18px 20px;margin:24px 0 28px;
+  border-radius:2px;border-left:4px solid var(--marca);
+  box-shadow:0 1px 0 rgba(0,0,0,.15),0 8px 16px rgba(0,0,0,.22);
 }
-.trena i{position:absolute;right:6px;font:700 11px/1 var(--texto);font-style:normal;color:var(--tinta);transform:translateY(-50%)}
-.trena i.chave{color:var(--marca);font-size:14px;font-weight:800}
-.medida{position:absolute;left:78px;right:0;top:calc(var(--n) * var(--cm));transform:translateY(-50%);display:flex;align-items:center;gap:10px;font-size:16px;line-height:1.25}
-.medida::before{content:"";position:absolute;left:-24px;width:20px;border-top:2px dashed var(--marca)}
-.medida b{font:800 34px/1 var(--display);font-stretch:75%;color:var(--jeans);min-width:1.2em}
-
-/* ============ 3. O QUE VOCÊ VAI CONSEGUIR ============ */
-.mapa-corte{overflow:hidden;margin-top:26px}
-.mapa{display:grid;grid-template-columns:1fr;margin:0 -1.5px -1.5px 0}
-.peca{display:grid;grid-template-columns:34px 1fr;column-gap:14px;padding:20px 14px 22px 0;border-right:1.5px dashed var(--tinta-2);border-bottom:1.5px dashed var(--tinta-2)}
-.peca.larga{grid-column:1/-1}
-.peca svg{width:30px;height:30px;color:var(--marca);grid-row:span 2;margin-top:2px}
-.peca h3{font-size:21px;margin-bottom:6px}
-.peca p{font-size:15.5px;line-height:1.45;color:var(--tinta-2)}
-.peca.larga h3{font-size:24px}
-
-/* ============ 4. COMO FUNCIONA ============ */
-.passos{list-style:none;display:grid;gap:30px;margin-top:30px}
-.passo{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start;align-content:start}
-.letra{font-family:var(--giz-fonte);font-size:88px;line-height:.8;color:var(--jeans);padding-top:6px}
-.passo h3{font-size:30px;margin-bottom:6px;color:var(--marca)}
-.passo p{color:var(--giz-2)}
-.bilhete{position:relative;margin:44px 0 0 6px;max-width:440px;transform:rotate(1.2deg);
-  background:var(--papel);color:var(--tinta);padding:24px 20px 20px;font-size:16px;
-  box-shadow:0 1px 0 rgba(0,0,0,.2),0 10px 16px rgba(0,0,0,.25)}
-.bilhete::before{content:"";position:absolute;left:50%;top:-8px;width:18px;height:18px;margin-left:-9px;border-radius:50%;
-  background:radial-gradient(circle at 35% 35%,#FF9A8E 0 2px,var(--marca) 3px);box-shadow:0 3px 4px rgba(0,0,0,.35)}
-.bilhete b{font-family:var(--display);font-stretch:85%;font-size:19px}
+.mac-badgeline{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.mac-badge{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 12px;
+  background:#fff;border:1.5px solid var(--tinta);border-radius:3px;
+  font-size:14px;font-weight:700;color:var(--tinta);
+}
+.mac-badge b{font-family:var(--giz-fonte);font-size:22px;color:var(--jeans);line-height:1}
+.mac-resumo p{font-size:15px;line-height:1.45;color:var(--tinta-2);margin:0}
+.mac-resumo p b{color:var(--tinta)}
 
 /* ============ 5. O QUE VOCÊ RECEBE ============ */
 .itens{list-style:none;display:grid;gap:26px;margin-top:30px}
@@ -380,19 +355,6 @@ dialog::backdrop{background:rgba(20,40,32,.7)}
 /* mockup do hero */
 .mockup-hero img{max-width:460px;margin:0 auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.3))}
 
-/* foto no bento */
-.foto-bento{grid-column:1/-1;margin:0 0 14px}
-.foto-bento img{aspect-ratio:16/9;object-fit:cover;border:6px solid #fff;box-shadow:0 1px 0 rgba(0,0,0,.15),0 8px 14px rgba(0,0,0,.18);transform:rotate(-1deg)}
-.peca .foto-bento{margin-bottom:16px}
-
-/* foto presa com fita crepe nos passos */
-.foto-passo{margin:2px 0 14px;max-width:420px}
-.foto-passo img{aspect-ratio:1/1;object-fit:cover;object-position:top;background:#fff;border:7px solid #fff;box-shadow:0 1px 0 rgba(0,0,0,.2),0 10px 16px rgba(0,0,0,.28);transform:rotate(-1.4deg)}
-.passo:nth-child(2) .foto-passo img{transform:rotate(1.2deg)}
-.foto-passo.com-foto::before{content:"";position:absolute;left:50%;top:-9px;width:74px;height:20px;margin-left:-37px;z-index:2;
-  background:rgba(236,224,190,.88);box-shadow:0 1px 2px rgba(0,0,0,.2);transform:rotate(-3deg)}
-
-
 /* capas em 3D no "O que você recebe" */
 .capa-item{width:100%}
 .capa-item img{filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
@@ -447,7 +409,6 @@ dialog::backdrop{background:rgba(20,40,32,.7)}
 }
 @media (min-width:980px){
   .mockup-hero img{max-width:520px}
-  .foto-passo{max-width:none}
   .final .grade-final{grid-template-columns:1.1fr .9fr}
   .final .foto-final{grid-column:2;grid-row:1}
 }
@@ -518,15 +479,7 @@ dialog::backdrop{background:rgba(20,40,32,.7)}
 }
 
 /* ============ telas maiores ============ */
-@media (min-width:520px){
-  .mapa{grid-template-columns:1fr 1fr}
-  .peca{display:block;padding:20px 16px 22px}
-  .peca svg{width:34px;height:34px;margin:0 0 12px}
-}
 @media (min-width:620px){
-  .mapa{grid-template-columns:repeat(3,1fr)}
-  .peca.larga{grid-column:span 2}
-  .peca.larga:last-child{grid-column:1/-1}
   .papel{padding:40px 36px}
   .itens{grid-template-columns:1fr 1fr;gap:34px 30px}
   .item.bonus{grid-column:1/-1;max-width:560px}
@@ -536,9 +489,6 @@ dialog::backdrop{background:rgba(20,40,32,.7)}
   :root{--fio-x:max(14px, calc(50% - var(--max) / 2 - 22px))}
   .wrap{padding:0 40px}
   section{padding:88px 0}
-  .passos{grid-template-columns:repeat(3,1fr);gap:34px}
-  .passo{grid-template-columns:1fr}
-  .letra{display:flex;align-items:flex-end;height:118px;font-size:150px;line-height:.8;padding:0;margin-bottom:10px}
   .garantia .grade{grid-template-columns:320px 1fr;gap:56px}
   .selo-garantia{margin:0;width:300px}
 }
@@ -550,16 +500,6 @@ dialog::backdrop{background:rgba(20,40,32,.7)}
   .envelope{width:400px}
   .env-arte{height:240px}
   .env-arte svg{height:212px}
-  /* fita na horizontal */
-  .regua{height:190px}
-  .trena{width:calc(var(--cm) * 21);height:54px;
-    background:
-      repeating-linear-gradient(90deg,var(--tinta) 0 1.5px,transparent 1.5px var(--cm)) 0 0/100% 20px no-repeat,
-      repeating-linear-gradient(90deg,var(--tinta) 0 1px,transparent 1px calc(var(--cm) / 2)) 0 0/100% 11px no-repeat,
-      var(--fita)}
-  .trena i{right:auto;top:auto;bottom:6px;transform:translateX(-50%)}
-  .medida{left:calc(var(--n) * var(--cm));right:auto;top:84px;transform:none;flex-direction:column;align-items:flex-start;gap:4px;width:132px;font-size:15px}
-  .medida::before{left:0;top:-30px;width:0;height:26px;border-top:0;border-left:2px dashed var(--marca)}
   .tag-area{max-width:460px}
   .final .wrap{text-align:left}
 }
@@ -694,100 +634,21 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ 2. FAIXA DE PROVA: fita métrica ============ -->
-<section class="prova" aria-labelledby="t-prova">
-  <div class="wrap">
-    <h2 id="t-prova">O caminho do seu negócio, medido na fita</h2>
-    <div class="regua">
-      <div class="trena" id="trena" aria-hidden="true"></div>
-      <p class="medida" style="--n:1"><b>1</b><span>máquina caseira é suficiente para começar</span></p>
-      <p class="medida" style="--n:4"><b>4</b><span>guias práticos de especialização</span></p>
-      <p class="medida" style="--n:7"><b>7</b><span>dias de garantia incondicional</span></p>
-      <p class="medida" style="--n:18"><b>18</b><span>consertos altamente lucrativos</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 3. O QUE VOCÊ VAI CONSEGUIR ============ -->
-<section id="beneficios" style="padding-top:0">
-  <div class="wrap">
-    <div class="folha">
-      <div class="papel">
-        <h2>Por que abrir seu negócio de consertos é o caminho mais seguro e lucrativo na costura</h2>
-        <p class="lead">Fazer roupas do zero exige modelagem difícil, tecidos caros e horas de corte para pouca margem. No conserto e ajuste de roupas prontas, você une o amor pela costura a um negócio de alta demanda: você resolve peças em 15 a 30 minutos, entrega com orgulho e constrói uma renda mensal de R$ 4.300 a R$ 6.700 no conforto da sua casa.</p>
-        <div class="mapa-corte"><div class="mapa">
-          <article class="peca larga">
-            <figure class="foto foto-solta foto-bento" style="--ar:16/9"><img src="assets/fotos/maquina-parada.webp" width="1600" height="900" alt="Máquina de costura doméstica com peças alinhadas para conserto no ateliê caseiro" decoding="async"><span class="slot">maquina-parada.webp (16:9)</span></figure>
-            <svg><use href="#i-maquina"/></svg>
-            <h3>A união perfeita entre o amor pela costura e uma renda digna</h3>
-            <p>Você não precisa de maquinário industrial caro nem de cursos caríssimos. Com um investimento simbólico de apenas R$ 19,90 e a sua máquina doméstica simples, você tem tudo para começar seu ateliê em casa. Especializando-se nos 18 consertos certos, você atende poucas peças por dia e fatura de R$ 4.300 a R$ 6.700 por mês nos seus próprios horários, perto da sua família.</p>
-          </article>
-          <article class="peca">
-            <svg><use href="#i-barra"/></svg>
-            <h3>Barras perfeitas com acabamento original</h3>
-            <p>O serviço mais pedido e que sustenta qualquer costureira. Calça jeans, social ou vestido: aprenda a manter o acabamento de fábrica e cobre de R$ 25 a R$ 35 por peça feita em 15 minutos.</p>
-          </article>
-          <article class="peca">
-            <svg><use href="#i-ziper"/></svg>
-            <h3>Zíper e cós: os ajustes mais valorizados</h3>
-            <p>A maioria das costureiras tem receio de trocar zíper ou ajustar cós. Ao dominar essas etapas no passo a passo ilustrado, você vira referência no bairro e cobra de R$ 35 a R$ 60 por ajuste.</p>
-          </article>
-          <article class="peca">
-            <svg><use href="#i-alfinete"/></svg>
-            <h3>Segurança total com a Sequência M.A.C.</h3>
-            <p>A cliente prova no espelho com alfinetes antes do primeiro ponto na máquina. Você costura com a certeza absoluta de que a peça vai vestir perfeitamente, sem medo de errar.</p>
-          </article>
-          <article class="peca">
-            <svg><use href="#i-mail"/></svg>
-            <h3>Divulgação silenciosa: sem bater de porta em porta</h3>
-            <p>Você não precisa ser vendedora nem se expor. Nossos posts prontos para Instagram, mensagens elegantes para WhatsApp e cartazes para condomínio atraem clientes de forma natural e profissional.</p>
-          </article>
-          <article class="peca larga">
-            <figure class="foto foto-solta foto-bento" style="--ar:16/9"><img src="assets/fotos/pilha-de-roupas.webp" width="1600" height="900" alt="Pilha de roupas organizadas com etiquetas de atendimento no ateliê" decoding="async"><span class="slot">pilha-de-roupas.webp (16:9)</span></figure>
-            <svg><use href="#i-cabide"/></svg>
-            <h3>Uma demanda infinita que não para de crescer</h3>
-            <p>As pessoas compram roupas pela internet todos os dias que chegam compridas ou largas. As lojas não consertam, e as oficinas tradicionais demoram semanas. Ao oferecer agilidade e capricho no seu bairro, você conquista clientes fiéis que trazem roupas novas todo mês.</p>
-          </article>
-        </div></div>
-        <div style="text-align:center;margin-top:28px">
-          <a class="cta js-scroll-preco" href="#preco">Quero Abrir Meu Negócio de Consertos</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 4. COMO FUNCIONA ============ -->
-<section id="como-funciona">
-  <div class="wrap">
-    <h2>Como funciona o seu negócio: da atração da cliente ao acabamento perfeito</h2>
-    <p class="lead">O método entrega o ciclo completo para quem quer viver de costura em casa: <b>como atrair clientes de forma elegante</b> e <b>como executar cada conserto com perfeição</b> para ser recomendada para a cidade inteira.</p>
-    <ol class="passos">
-      <li class="passo">
-        <span class="letra" aria-hidden="true">M</span>
-        <div><figure class="foto foto-solta foto-passo" style="--ar:4/3"><img src="assets/apostila/mac-medir.webp" width="560" height="800" alt="Ilustração: fita métrica medindo a cintura de uma calça" decoding="async"><span class="slot">passo-medir.webp (4:3)</span></figure><h3>Medir com Postura Profissional</h3><p>Quando a cliente chega pelo WhatsApp ou indicação, você confere o ponto exato do ajuste e anota na Ficha de Atendimento do Ateliê. A cliente percebe na hora o capricho e a segurança de quem tem método.</p></div>
-      </li>
-      <li class="passo">
-        <span class="letra" aria-hidden="true">A</span>
-        <div><figure class="foto foto-solta foto-passo" style="--ar:4/3"><img src="assets/apostila/mac-alfinetar.webp" width="560" height="800" alt="Ilustração: barra dobrada e presa com alfinetes" decoding="async"><span class="slot">passo-alfinetar.webp (4:3)</span></figure><h3>Alfinetar e Validar no Espelho</h3><p>Você dobra, alfineta e faz a prova visual imediata. A cliente aprova o caimento no espelho antes de qualquer corte ou ponto de máquina. Risco zero de retrabalho ou insatisfação.</p></div>
-      </li>
-      <li class="passo">
-        <span class="letra" aria-hidden="true">C</span>
-        <div><figure class="foto foto-solta foto-passo" style="--ar:4/3"><img src="assets/apostila/mac-costurar.webp" width="560" height="800" alt="Ilustração: barra sendo costurada na máquina doméstica" decoding="async"><span class="slot">passo-costurar.webp (4:3)</span></figure><h3>Costurar com Técnica de Ateliê</h3><p>Com o guia visual aberto na bancada, você executa a costura com acabamento impecável em poucos minutos. Você entrega uma peça perfeita, recebe o valor à vista e fideliza uma cliente que volta sempre.</p></div>
-      </li>
-    </ol>
-    <div class="bilhete">
-      <b>Por que o investimento é de apenas R$ 19,90 se o retorno pode passar de R$ 6.000?</b>
-      <p>Queremos que qualquer mulher, mesmo começando do absoluto zero e com pouco dinheiro, possa ter em mãos um método profissional de ateliê sem pesar no orçamento. Por menos do valor cobrado em uma única barra (apenas R$ 19,90), você recebe o passo a passo ilustrado dos 18 consertos mais procurados e todas as ferramentas para atrair suas primeiras clientes com segurança.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 5. O QUE VOCÊ RECEBE ============ -->
+<!-- ============ 2. O QUE VOCÊ RECEBE ============ -->
 <section id="entregaveis" style="padding-top:24px">
   <div class="wrap">
-    <h2>Tudo o que você precisa para abrir o seu negócio de consertos</h2>
+    <h2>Tudo o que você precisa para faturar com consertos</h2>
     <p class="lead">O método completo de especialização nos 18 consertos mais lucrativos da costura por uma taxa única de apenas <b>R$ 19,90</b>, acompanhado do pacote essencial de ferramentas para atrair e atender clientes.</p>
+
+    <div class="mac-resumo">
+      <div class="mac-badgeline">
+        <span class="mac-badge"><b>M</b> Medir</span>
+        <span class="mac-badge"><b>A</b> Alfinetar</span>
+        <span class="mac-badge"><b>C</b> Costurar</span>
+      </div>
+      <p><b>A Sequência M.A.C.:</b> a cliente aprova o caimento no espelho antes do primeiro ponto na máquina. Você costura com segurança total, sem medo de errar a peça.</p>
+    </div>
+
     <ul class="itens">
       <li class="item">
         <figure class="foto capa-item"><img src="assets/fotos/mockup-guia-1.webp" width="800" height="1000" alt="Capa do Guia 1, Partida" decoding="async"><div class="reserva"><div class="mini" aria-hidden="true"><div class="mt"><span>Ajuste Certo</span><b>1</b></div><div class="ma"><svg viewBox="0 0 120 90"><use href="#d-maquina"/></svg></div><div class="mn">Partida</div></div></div><span class="slot">mockup-guia-1.webp (4:5)</span></figure>
@@ -871,7 +732,32 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ DEPOIMENTOS EM CARROSSEL ============ -->
+<!-- ============ 3. PRÉVIA DO GUIA ============ -->
+<section id="previa" style="padding-top:24px">
+  <div class="wrap">
+    <div id="blocoPrevia">
+      <h2>Veja a clareza de cada conserto por dentro</h2>
+      <p class="lead">É assim que cada ajuste aparece no Guia 3: etapa por etapa, com desenho e dicas práticas para você entregar um trabalho impecável.</p>
+      <div class="folha instrucoes">
+        <article class="papel" aria-label="Exemplo de página do Guia 3">
+          <div class="inst-topo"><span>Guia 3, conserto 01</span><span>Ajuste Certo</span></div>
+          <h3>Barra simples em calça de tecido plano</h3>
+          <div class="fichas"><span>Nível iniciante</span><span>Ponto reto</span><span>Etapa C da M.A.C.</span></div>
+          <ol class="etapas">
+            <li><span class="des foto"><img src="assets/fotos/pagina-passo-1.webp" width="800" height="600" alt="Desenho: vinco da barra sendo passado a ferro sobre a marcação" decoding="async"><span class="reserva"><svg><use href="#i-regua"/></svg></span><span class="slot">pagina-passo-1.webp (4:3)</span></span><span>Confira a marcação feita na etapa do alfinete e passe o vinco a ferro.</span></li>
+            <li><span class="des foto"><img src="assets/fotos/pagina-passo-2.webp" width="800" height="600" alt="Desenho: excesso de tecido cortado com tesoura e a primeira dobra feita" decoding="async"><span class="reserva"><svg><use href="#i-alfinete"/></svg></span><span class="slot">pagina-passo-2.webp (4:3)</span></span><span>Corte o excesso deixando a margem indicada na ficha e faça a primeira dobra.</span></li>
+            <li><span class="des foto"><img src="assets/fotos/pagina-passo-3.webp" width="800" height="600" alt="Desenho: barra sendo costurada rente à dobra na máquina" decoding="async"><span class="reserva"><svg><use href="#i-agulha"/></svg></span><span class="slot">pagina-passo-3.webp (4:3)</span></span><span>Costure rente à dobra, começando pela costura interna da perna.</span></li>
+            <li><span class="des foto"><img src="assets/fotos/pagina-passo-4.webp" width="800" height="600" alt="Desenho: as duas pernas da calça lado a lado para comparar o comprimento" decoding="async"><span class="reserva"><svg><use href="#i-barra"/></svg></span><span class="slot">pagina-passo-4.webp (4:3)</span></span><span>Prove de novo e compare as duas pernas lado a lado antes do acabamento.</span></li>
+          </ol>
+          <p class="dica"><b>Dica de Ateliê:</b> comece sempre pela perna menos à vista. Se precisar refazer o início, o detalhe fica onde ninguém repara e a cliente sai encantada.</p>
+        </article>
+      </div>
+      <p class="legenda">Página de demonstração. O guia completo traz 18 consertos lucrativos neste mesmo formato.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. DEPOIMENTOS ============ -->
 <section class="secao-depoimentos" id="depoimentos">
   <div class="wrap">
     <h2>Resultados reais de quem já aplica o método</h2>
@@ -936,7 +822,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ 6. PREÇO ============ -->
+<!-- ============ 5. PREÇO ============ -->
 <section class="preco" id="preco">
   <div class="wrap">
     <h2>Abra seu próprio negócio de consertos hoje mesmo</h2>
@@ -982,32 +868,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ 7. PRÉVIA DO GUIA ============ -->
-<section id="previa" style="padding-top:24px">
-  <div class="wrap">
-    <div id="blocoPrevia">
-      <h2>Veja a clareza de cada conserto por dentro</h2>
-      <p class="lead">É assim que cada ajuste aparece no Guia 3: etapa por etapa, com desenho e dicas práticas para você entregar um trabalho impecável.</p>
-      <div class="folha instrucoes">
-        <article class="papel" aria-label="Exemplo de página do Guia 3">
-          <div class="inst-topo"><span>Guia 3, conserto 01</span><span>Ajuste Certo</span></div>
-          <h3>Barra simples em calça de tecido plano</h3>
-          <div class="fichas"><span>Nível iniciante</span><span>Ponto reto</span><span>Etapa C da M.A.C.</span></div>
-          <ol class="etapas">
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-1.webp" width="800" height="600" alt="Desenho: vinco da barra sendo passado a ferro sobre a marcação" decoding="async"><span class="reserva"><svg><use href="#i-regua"/></svg></span><span class="slot">pagina-passo-1.webp (4:3)</span></span><span>Confira a marcação feita na etapa do alfinete e passe o vinco a ferro.</span></li>
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-2.webp" width="800" height="600" alt="Desenho: excesso de tecido cortado com tesoura e a primeira dobra feita" decoding="async"><span class="reserva"><svg><use href="#i-alfinete"/></svg></span><span class="slot">pagina-passo-2.webp (4:3)</span></span><span>Corte o excesso deixando a margem indicada na ficha e faça a primeira dobra.</span></li>
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-3.webp" width="800" height="600" alt="Desenho: barra sendo costurada rente à dobra na máquina" decoding="async"><span class="reserva"><svg><use href="#i-agulha"/></svg></span><span class="slot">pagina-passo-3.webp (4:3)</span></span><span>Costure rente à dobra, começando pela costura interna da perna.</span></li>
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-4.webp" width="800" height="600" alt="Desenho: as duas pernas da calça lado a lado para comparar o comprimento" decoding="async"><span class="reserva"><svg><use href="#i-barra"/></svg></span><span class="slot">pagina-passo-4.webp (4:3)</span></span><span>Prove de novo e compare as duas pernas lado a lado antes do acabamento.</span></li>
-          </ol>
-          <p class="dica"><b>Dica de Ateliê:</b> comece sempre pela perna menos à vista. Se precisar refazer o início, o detalhe fica onde ninguém repara e a cliente sai encantada.</p>
-        </article>
-      </div>
-      <p class="legenda">Página de demonstração. O guia completo traz 18 consertos lucrativos neste mesmo formato.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8. GARANTIA ============ -->
+<!-- ============ 6. GARANTIA ============ -->
 <section class="garantia" id="garantia" style="padding-top:24px">
   <div class="wrap grade">
     <div class="selo-garantia" role="img" aria-label="Selo: garantia incondicional de 7 dias, reembolso integral">
@@ -1034,8 +895,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
     </div>
     <div>
       <h2>Risco zero: garantia incondicional de 7 dias</h2>
-      <p class="lead">Baixe os guias, estude o método e teste na sua máquina. Por um valor tão simbólico de apenas <b>R$ 19,90</b>, você tem risco absolutamente zero: se por qualquer motivo você achar que não é para você ou não se sentir segura para começar seu negócio, basta nos enviar um e-mail em até 7 dias e devolvemos 100% do seu dinheiro.</p>
-      <p class="lead" style="margin-top:12px">Sem burocracia, sem perguntas e sem ressentimentos. Todo o risco fica do meu lado.</p>
+      <p class="lead">Baixe os guias, teste na sua máquina e confira cada detalhe. Se por qualquer motivo achar que o método não é para você, basta nos enviar um e-mail em até 7 dias e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia e sem ressentimentos.</p>
       <p class="assina-garantia"><img src="assets/fotos/expert-avatar.webp" width="300" height="300" alt="" data-expert-alt><span><span class="giz" data-expert="assinatura">Karina Eduarda</span><small>autora do Ajuste Certo</small></span></p>
       <div style="margin-top:24px">
         <a class="cta js-scroll-preco" href="#preco">Quero Testar por 7 Dias Sem Risco</a>
@@ -1044,7 +904,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ 9. FAQ ============ -->
+<!-- ============ 7. FAQ ============ -->
 <section id="duvidas" style="padding-top:24px">
   <div class="wrap">
     <div class="folha" style="max-width:780px">
@@ -1052,44 +912,12 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
         <h2>Perguntas frequentes sobre o negócio</h2>
         <div class="faq">
           <details>
-            <summary>Como funciona o ganho de R$ 4.300 a R$ 6.700 por mês? É realmente possível?<span class="x" aria-hidden="true"></span></summary>
-            <p>Sim, e essa é a média real praticada por costureiras que se especializam unicamente em consertos e ajustes no Brasil. Fazendo de 4 a 6 peças por dia (por exemplo, 3 barras a R$ 25-35 cada e 2 ajustes de cós, lateral ou zíper a R$ 40-55 cada), você fatura entre R$ 170 e R$ 260 por dia. Em 25 dias de trabalho, isso dá entre R$ 4.300 e R$ 6.700 no seu bolso no fim do mês, trabalhando cerca de 2 a 3 horas diárias na máquina da sua casa.</p>
-          </details>
-          <details>
-            <summary>E se ninguém me procurar? Preciso sair batendo de porta em porta?<span class="x" aria-hidden="true"></span></summary>
-            <p>De jeito nenhum! Ninguém gosta de ser inconveniente nem de bater de porta em porta. É exatamente por isso que você recebe o <b>Guia de Divulgação Silenciosa</b>, o <b>Pack de Artes para Instagram</b> e o <b>Cartaz para Imprimir</b>. Você divulga discretamente no status do WhatsApp, no grupo do condomínio, no mural do prédio e em parceria com pequenas lojas de roupas da sua região (que vendem calças compridas todos os dias e precisam de alguém de confiança para indicar). As clientes chegam até você de forma natural.</p>
-          </details>
-          <details>
-            <summary>Nunca consertei nada para fora. Consigo abrir meu negócio do zero?<span class="x" aria-hidden="true"></span></summary>
-            <p>Com certeza. O grande erro de quem começa na costura é tentar abraçar tudo: fazer vestidos do zero, modelagem complexa e lidar com clientes indecisas. No Ajuste Certo, o seu modelo de negócio é ser especialista nos 18 consertos mais pedidos do mercado. Roupa pronta já vem costurada: seu único trabalho é ajustar o caimento. O método M.A.C. ensina o passo a passo com nível iniciante para você começar pelas peças fáceis e já ir faturando com segurança.</p>
-          </details>
-          <details>
             <summary>Qual máquina eu preciso ter? Preciso de overloque ou máquina industrial?<span class="x" aria-hidden="true"></span></summary>
             <p>Não precisa de máquina industrial nem de overloque para começar! Uma máquina de costura doméstica comum (antiga ou moderna) com ponto reto e zigue-zague faz mais de 90% dos consertos mais lucrativos (barras de calça jeans, laterais, cós e zíperes). O Guia 1 ensina todos os atalhos para entregar acabamento de fábrica na sua máquina caseira.</p>
           </details>
           <details>
-            <summary>Minha máquina é antiga ou bem simples. Ela aguenta o trabalho?<span class="x" aria-hidden="true"></span></summary>
-            <p>Aguenta perfeitamente. Máquinas mecânicas clássicas e antigas (como as pretinhas ou modelos tradicionais de ferro) são conhecidas justamente pela força de motor: costuram jeans grosso e sarja com muita facilidade. O segredo é usar a agulha correta e a linha certa, o que detalhamos nos guias.</p>
-          </details>
-          <details>
-            <summary>Tenho medo de estragar a roupa de uma cliente. Como o método me protege?<span class="x" aria-hidden="true"></span></summary>
-            <p>O método M.A.C. foi criado sob medida para eliminar o medo do erro. A cliente experimenta a peça e aprova o caimento com alfinetes no espelho antes de você dar o primeiro ponto na máquina. Se precisar ajustar, você ajusta no alfinete, sem tesoura e sem linha para desmanchar. Além disso, o Guia 4 ensina técnicas seguras de desmanche caso precise.</p>
-          </details>
-          <details>
-            <summary>Como funcionam os bônus de Instagram, WhatsApp e Cartaz?<span class="x" aria-hidden="true"></span></summary>
-            <p>Eles chegam imediatamente junto com seus guias. Você recebe artes profissionais prontas para postar no feed e stories do seu Instagram ou WhatsApp, scripts de atendimento para responder orçamentos sem gaguejar e fechar pedidos com simpatia, e o cartaz pronto em PDF de alta qualidade para imprimir e fixar no elevador ou portaria do condomínio.</p>
-          </details>
-          <details>
-            <summary>Quais consertos de especialização estão incluídos no material?<span class="x" aria-hidden="true"></span></summary>
-            <p>São 18 consertos completos: barras de calça simples, barra original de jeans, barra de saia, vestido e manga, laterais de camisa e camiseta de malha, cós simples e cós com elástico, troca de zíper comum e invisível, encurtar manga e alça, largura de vestido e shorts, costura que abriu, botão e acabamentos invisíveis.</p>
-          </details>
-          <details>
-            <summary>Funciona com jeans grosso e com tecidos de malha?<span class="x" aria-hidden="true"></span></summary>
-            <p>Sim! O guia traz instruções específicas para cada tipo de tecido: jeans grosso (com acabamento original idêntico ao de loja), tecidos planos de alfaiataria e malhas que esticam, indicando a agulha correta e a regulagem do ponto para não arrebentar nem repuxar o tecido.</p>
-          </details>
-          <details>
-            <summary>Por que os guias são em PDF e não aulas em vídeo?<span class="x" aria-hidden="true"></span></summary>
-            <p>Porque quando você está na máquina com tecido e alfinetes na mão, pausar vídeo é impraticável. O guia em PDF fica aberto na página exata do conserto que você está executando, permitindo bater o olho em cada passo ilustrado na hora.</p>
+            <summary>Nunca consertei nada para fora. Consigo abrir meu negócio do zero?<span class="x" aria-hidden="true"></span></summary>
+            <p>Com certeza. O grande erro de quem começa na costura é tentar fazer vestidos do zero, modelagem complexa e lidar com peças sob medida. No conserto, a roupa já vem pronta: seu único trabalho é ajustar o caimento. A Sequência M.A.C. ensina o passo a passo com nível iniciante para você começar pelas peças fáceis e ir faturando com segurança desde a primeira semana.</p>
           </details>
           <details>
             <summary>Como e quando recebo o material e os bônus?<span class="x" aria-hidden="true"></span></summary>
@@ -1097,7 +925,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
           </details>
           <details>
             <summary>O pagamento é único? Tem mensalidade ou taxas extras?<span class="x" aria-hidden="true"></span></summary>
-            <p>Pagamento único de apenas R$ 19,90. Sem mensalidade, sem cobranças futuras e sem pegadinhas. Uma única barra de calça que você fizer para uma cliente já paga o valor do guia e ainda sobra dinheiro no seu bolso.</p>
+            <p>Pagamento único de apenas R$ 19,90. Sem mensalidade, sem cobranças futuras e sem pegadinhas. Uma única barra de calça que você fizer para uma cliente já paga todo o valor do material e ainda sobra lucro no seu bolso.</p>
           </details>
           <details>
             <summary>E se eu achar que não é para mim?<span class="x" aria-hidden="true"></span></summary>
@@ -1109,26 +937,26 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ 10. CTA FINAL ============ -->
+<!-- ============ 8. CTA FINAL ============ -->
 <section class="final" id="final">
   <div class="wrap final-expert">
     <figure class="expert-recorte expert-costurando"><img src="assets/fotos/expert-costurando.webp" width="760" height="1058" alt="" data-expert-alt decoding="async"></figure>
     <div>
-    <h2>O seu próprio negócio de consertos pode começar ainda esta semana.</h2>
-    <p class="lead">A máquina você já tem em casa. A demanda de roupas precisando de ajuste está ao seu redor todos os dias. Por um investimento único de apenas <b>R$ 19,90</b> — menos do que o valor que você vai faturar em uma única barra de calça —, você tem em mãos o método M.A.C., a especialização nos 18 consertos certos e todos os materiais prontos de divulgação para conquistar sua independência financeira.</p>
-    <a class="cta js-scroll-preco" href="#preco">Quero Abrir Meu Negócio de Consertos</a>
-    <ul class="selos">
+      <h2>Seu próprio negócio de consertos começa esta semana</h2>
+      <p class="lead">Com a máquina que você já tem em casa e um investimento de apenas <b>R$ 19,90</b> (menos que o valor de uma única barra de calça), você recebe o método M.A.C., os 18 consertos mais lucrativos e todas as ferramentas de divulgação para começar a faturar.</p>
+      <a class="cta js-scroll-preco" href="#preco">Quero Abrir Meu Negócio de Consertos</a>
+      <ul class="selos">
         <li><span class="sel"><svg><use href="#i-cadeado"/></svg></span><span><b>Compra</b>segura</span></li>
         <li><span class="sel"><svg><use href="#i-escudo"/></svg></span><span><b>Garantia</b>de 7 dias</span></li>
         <li><span class="sel"><svg><use href="#i-raio"/></svg></span><span><b>Acesso</b>imediato</span></li>
       </ul>
-  </div>
+    </div>
   </div>
 </section>
 
 </main>
 
-<!-- ============ 11. RODAPÉ ============ -->
+<!-- ============ 9. RODAPÉ ============ -->
 <footer class="rodape" id="rodape">
   <div class="wrap">
     <p class="marca" style="font-size:30px">Ajuste Certo</p>
@@ -1245,20 +1073,6 @@ const DEPOIMENTOS = [];
   // borda numerada da base de corte
   let b = ''; for (let i = 1; i <= 30; i++) b += '<span>' + i + '</span>';
   $('#borda').innerHTML = b;
-
-  // números da fita métrica
-  const destaque = [1,4,7,18]; let t = '';
-  for (let i = 0; i <= 20; i++) {
-    t += '<i class="' + (destaque.includes(i) ? 'chave' : '') + '" style="--p:' + i + '">' + i + '</i>';
-  }
-  const trena = $('#trena'); trena.innerHTML = t;
-  const horizontal = matchMedia('(min-width:980px)');
-  const posiciona = () => trena.querySelectorAll('i').forEach(el => {
-    const p = el.style.getPropertyValue('--p');
-    el.style.top = horizontal.matches ? '' : 'calc(' + p + ' * var(--cm))';
-    el.style.left = horizontal.matches ? 'calc(' + p + ' * var(--cm))' : '';
-  });
-  posiciona(); horizontal.addEventListener('change', posiciona);
 
   // depoimentos em texto (opcional)
   if (DEPOIMENTOS.length) {
