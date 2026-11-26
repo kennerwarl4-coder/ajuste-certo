@@ -6,10 +6,11 @@
 <title>Ajuste Certo · 101 Consertos Ilustrados para sua Renda Extra com Costura</title>
 <meta name="description" content="Pack com 101 consertos ilustrados passo a passo na máquina de casa e artes prontas para divulgar. Acesso imediato por R$ 19,90.">
 <meta name="theme-color" content="#9E1218">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,700..900;1,62..125,700..900&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/fotos/mockup-hero-celular.webp" imagesrcset="assets/fotos/mockup-hero-celular.webp 800w, assets/fotos/mockup-hero-1200.webp 1200w" imagesizes="(min-width: 980px) 560px, 92vw">
+<link rel="preload" href="assets/fontes/archivo-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fontes/nunito.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fontes/archivo-900-italico.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-720.avif 720w, assets/img/hero-1120.avif 1120w" imagesizes="(min-width: 980px) 560px, 92vw" fetchpriority="high">
+<link rel="dns-prefetch" href="https://connect.facebook.net">
 <!--
   ===================================================================
   AJUSTE CERTO · página de vendas · Fábrica de Ofertas · v4
@@ -20,6 +21,9 @@
   ===================================================================
 -->
 <style>
+@font-face{font-family:"Archivo";font-style:normal;font-weight:900;font-stretch:62% 80%;font-display:swap;src:url(assets/fontes/archivo-900.woff2) format("woff2")}
+@font-face{font-family:"Archivo";font-style:italic;font-weight:900;font-stretch:62% 80%;font-display:swap;src:url(assets/fontes/archivo-900-italico.woff2) format("woff2")}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:600 900;font-display:swap;src:url(assets/fontes/nunito.woff2) format("woff2")}
 :root{
   --amarelo:#FFD22E;
   --amarelo-claro:#FFE680;
@@ -49,7 +53,11 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{font-family:var(--corpo);font-size:17px;line-height:1.6;color:var(--texto);background:var(--creme);-webkit-font-smoothing:antialiased;overflow-x:clip}
 html{overflow-x:clip}
 main{overflow-x:clip}
+/* seções fora da tela só são montadas quando chegam perto (acelera a 1ª pintura no celular) */
+main>section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 1100px}
+html.cv-off main>section{content-visibility:visible}
 img,svg{display:block;max-width:100%}
+picture{display:contents}
 a{color:inherit}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--marinho);outline-offset:3px;border-radius:6px}
@@ -165,7 +173,7 @@ section{position:relative;padding:72px 0}
 .hero{padding:22px 0 84px;overflow:hidden}
 .topo-logo{display:flex;justify-content:center;margin-bottom:16px}
 .topo-logo img{width:clamp(190px,56vw,280px);height:auto}
-.hero-grade{display:grid;grid-template-areas:"texto" "visual" "acoes";gap:0;align-items:center}
+.hero-grade{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"texto" "visual" "acoes";gap:0;align-items:center}
 .hero-texto{grid-area:texto;text-align:center}
 .hero-visual{grid-area:visual;position:relative;width:100%;max-width:520px;margin:18px auto 0}
 .hero-acoes{grid-area:acoes;text-align:center}
@@ -274,7 +282,6 @@ section{position:relative;padding:72px 0}
 .carrossel-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 2px 18px}
 .carrossel-track::-webkit-scrollbar{display:none}
 .carrossel-slide{height:min(128vw,620px);display:flex;align-items:center;justify-content:center;flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;border-radius:20px;overflow:hidden;background:#fff;border:6px solid #fff;box-shadow:var(--sombra)}
-.carrossel-slide picture{display:contents}
 .carrossel-slide img{width:100%;height:100%;object-fit:contain;border-radius:12px}
 .carrossel-btn{position:absolute;z-index:3;top:calc(50% - 10px);transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:var(--vinho);color:#fff;border:3px solid #fff;display:grid;place-items:center;box-shadow:0 6px 14px rgba(105,10,15,.4);cursor:pointer;padding:0}
 .carrossel-btn:hover{background:var(--vermelho)}
@@ -398,7 +405,7 @@ dialog::backdrop{background:rgba(12,21,64,.78)}
 @media (min-width:980px){
   .hero{padding:26px 0 104px}
   .topo-logo{margin-bottom:6px}
-  .hero-grade{grid-template-columns:1fr 1fr;grid-template-areas:"texto visual" "acoes visual";column-gap:40px;align-items:start}
+  .hero-grade{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"texto visual" "acoes visual";column-gap:40px;align-items:start}
   .hero-texto,.hero-acoes{text-align:left}
   .hero-texto{align-self:end}
   .hero h1{justify-content:flex-start}
@@ -432,16 +439,13 @@ dialog::backdrop{background:rgba(12,21,64,.78)}
 </style>
 <!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+!function(f){if(f.fbq)return;var n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window);
 fbq('init', '2455920631826658');
 fbq('track', 'PageView');
+/* o script do pixel baixa na 1ª interação ou logo após o carregamento; os eventos acima ficam na fila e são enviados quando ele chega */
+(function(){var ok=0;function carrega(){if(ok)return;ok=1;var t=document.createElement('script');t.async=true;t.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(t)}
+['scroll','pointerdown','touchstart','keydown'].forEach(function(e){addEventListener(e,carrega,{once:true,passive:true})});
+addEventListener('load',function(){setTimeout(carrega,3000)});})();
 </script>
 <!-- End Meta Pixel Code -->
 </head>
@@ -470,7 +474,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
 <section class="hero fundo-sol" id="topo">
   <div class="wrap">
     <header class="topo-logo">
-      <img src="assets/fotos/logo-ajuste-certo.webp" width="720" height="221" alt="Ajuste Certo · Consertos ilustrados">
+      <picture><source type="image/avif" srcset="assets/img/logo-560.avif 560w"><img src="assets/img/logo-560.webp" srcset="assets/img/logo-560.webp 560w" width="560" height="172" alt="Ajuste Certo · Consertos ilustrados"></picture>
     </header>
     <div class="hero-grade">
       <div class="hero-texto">
@@ -480,7 +484,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
       </div>
 
       <div class="hero-visual">
-        <img src="assets/fotos/mockup-hero-celular.webp" srcset="assets/fotos/mockup-hero-celular.webp 800w, assets/fotos/mockup-hero-1200.webp 1200w" sizes="(min-width: 980px) 560px, 92vw" width="800" height="800" alt="Pack Ajuste Certo: caderno com os consertos ilustrados, páginas de troca de zíper, manga e barra e tablet com ajuste de cintura" fetchpriority="high">
+        <picture><source type="image/avif" srcset="assets/img/hero-720.avif 720w, assets/img/hero-1120.avif 1120w" sizes="(min-width: 980px) 560px, 92vw"><img src="assets/img/hero-1120.webp" srcset="assets/img/hero-720.webp 720w, assets/img/hero-1120.webp 1120w" sizes="(min-width: 980px) 560px, 92vw" width="720" height="720" alt="Pack Ajuste Certo: caderno com os consertos ilustrados, páginas de troca de zíper, manga e barra e tablet com ajuste de cintura" fetchpriority="high"></picture>
         <div class="selo" aria-label="Apenas R$ 19,90"><span class="s1">Apenas</span><span class="s2"><small>R$</small>19<sup>,90</sup></span></div>
       </div>
 
@@ -523,9 +527,9 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
     <p class="lead" style="margin-top:24px;max-width:36em">É aí que está o dinheiro dos consertos. Por isso cada ajuste do pack vem desenhado etapa por etapa, com os erros comuns e o que conferir antes de entregar a peça.</p>
 
     <div class="leque">
-      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-barra-jeans-g.webp"><span class="rot">Barra de jeans</span><img src="assets/apostila/conserto-barra-jeans.webp" width="600" height="850" alt="Página do guia: barra de calça jeans passo a passo" loading="lazy" decoding="async"><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
-      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-cos-g.webp"><span class="rot">Ajuste de cós</span><img src="assets/apostila/conserto-cos.webp" width="600" height="850" alt="Página do guia: ajuste de cós passo a passo" loading="lazy" decoding="async"><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
-      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-ziper-g.webp"><span class="rot">Troca de zíper</span><img src="assets/apostila/conserto-ziper.webp" width="600" height="850" alt="Página do guia: troca de zíper passo a passo" loading="lazy" decoding="async"><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
+      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-barra-jeans-g.webp"><span class="rot">Barra de jeans</span><picture><source type="image/avif" srcset="assets/img/pagina-barra-560.avif 560w"><img src="assets/img/pagina-barra-560.webp" srcset="assets/img/pagina-barra-560.webp 560w" width="480" height="679" alt="Página do guia: barra de calça jeans passo a passo" loading="lazy" decoding="async"></picture><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
+      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-cos-g.webp"><span class="rot">Ajuste de cós</span><picture><source type="image/avif" srcset="assets/img/pagina-cos-560.avif 560w"><img src="assets/img/pagina-cos-560.webp" srcset="assets/img/pagina-cos-560.webp 560w" width="480" height="679" alt="Página do guia: ajuste de cós passo a passo" loading="lazy" decoding="async"></picture><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
+      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-ziper-g.webp"><span class="rot">Troca de zíper</span><picture><source type="image/avif" srcset="assets/img/pagina-ziper-560.avif 560w"><img src="assets/img/pagina-ziper-560.webp" srcset="assets/img/pagina-ziper-560.webp 560w" width="480" height="679" alt="Página do guia: troca de zíper passo a passo" loading="lazy" decoding="async"></picture><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
     </div>
     <p class="dica-leque">Toque numa página para ver de perto</p>
 
@@ -547,12 +551,12 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
     </div>
 
     <ul class="grade-consertos">
-      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-barra-jeans.webp" width="800" height="800" alt="Barra de calça jeans" loading="lazy" decoding="async"><span class="num c1">1</span></div><div class="info"><h3>Barra de calça jeans</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 35</span></div></li>
-      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-cos.webp" width="800" height="800" alt="Ajuste de cós" loading="lazy" decoding="async"><span class="num c2">2</span></div><div class="info"><h3>Ajuste de cós</h3><span class="preco-chip"><small>cobra-se</small>R$ 30 a 45</span></div></li>
-      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-ziper.webp" width="800" height="800" alt="Troca de zíper" loading="lazy" decoding="async"><span class="num c3">3</span></div><div class="info"><h3>Troca de zíper</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 40</span></div></li>
-      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-lateral.webp" width="800" height="800" alt="Apertar lateral de camisa" loading="lazy" decoding="async"><span class="num c4">4</span></div><div class="info"><h3>Apertar lateral</h3><span class="preco-chip"><small>cobra-se</small>R$ 30 a 50</span></div></li>
-      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-manga.webp" width="800" height="800" alt="Encurtar manga" loading="lazy" decoding="async"><span class="num c5">5</span></div><div class="info"><h3>Encurtar manga</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 40</span></div></li>
-      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-alca.webp" width="800" height="800" alt="Ajuste de alça" loading="lazy" decoding="async"><span class="num c1">6</span></div><div class="info"><h3>Ajuste de alça</h3><span class="preco-chip"><small>cobra-se</small>R$ 20 a 35</span></div></li>
+      <li class="card conserto"><div class="ft"><picture><source type="image/avif" srcset="assets/img/conserto-barra-jeans-400.avif 400w, assets/img/conserto-barra-jeans-700.avif 700w" sizes="(min-width: 640px) 340px, 46vw"><img src="assets/img/conserto-barra-jeans-700.webp" srcset="assets/img/conserto-barra-jeans-400.webp 400w, assets/img/conserto-barra-jeans-700.webp 700w" sizes="(min-width: 640px) 340px, 46vw" width="700" height="700" alt="Barra de calça jeans" loading="lazy" decoding="async"></picture><span class="num c1">1</span></div><div class="info"><h3>Barra de calça jeans</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 35</span></div></li>
+      <li class="card conserto"><div class="ft"><picture><source type="image/avif" srcset="assets/img/conserto-cos-400.avif 400w, assets/img/conserto-cos-700.avif 700w" sizes="(min-width: 640px) 340px, 46vw"><img src="assets/img/conserto-cos-700.webp" srcset="assets/img/conserto-cos-400.webp 400w, assets/img/conserto-cos-700.webp 700w" sizes="(min-width: 640px) 340px, 46vw" width="700" height="700" alt="Ajuste de cós" loading="lazy" decoding="async"></picture><span class="num c2">2</span></div><div class="info"><h3>Ajuste de cós</h3><span class="preco-chip"><small>cobra-se</small>R$ 30 a 45</span></div></li>
+      <li class="card conserto"><div class="ft"><picture><source type="image/avif" srcset="assets/img/conserto-ziper-400.avif 400w, assets/img/conserto-ziper-700.avif 700w" sizes="(min-width: 640px) 340px, 46vw"><img src="assets/img/conserto-ziper-700.webp" srcset="assets/img/conserto-ziper-400.webp 400w, assets/img/conserto-ziper-700.webp 700w" sizes="(min-width: 640px) 340px, 46vw" width="700" height="700" alt="Troca de zíper" loading="lazy" decoding="async"></picture><span class="num c3">3</span></div><div class="info"><h3>Troca de zíper</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 40</span></div></li>
+      <li class="card conserto"><div class="ft"><picture><source type="image/avif" srcset="assets/img/conserto-lateral-400.avif 400w, assets/img/conserto-lateral-700.avif 700w" sizes="(min-width: 640px) 340px, 46vw"><img src="assets/img/conserto-lateral-700.webp" srcset="assets/img/conserto-lateral-400.webp 400w, assets/img/conserto-lateral-700.webp 700w" sizes="(min-width: 640px) 340px, 46vw" width="700" height="700" alt="Apertar lateral de camisa" loading="lazy" decoding="async"></picture><span class="num c4">4</span></div><div class="info"><h3>Apertar lateral</h3><span class="preco-chip"><small>cobra-se</small>R$ 30 a 50</span></div></li>
+      <li class="card conserto"><div class="ft"><picture><source type="image/avif" srcset="assets/img/conserto-manga-400.avif 400w, assets/img/conserto-manga-700.avif 700w" sizes="(min-width: 640px) 340px, 46vw"><img src="assets/img/conserto-manga-700.webp" srcset="assets/img/conserto-manga-400.webp 400w, assets/img/conserto-manga-700.webp 700w" sizes="(min-width: 640px) 340px, 46vw" width="700" height="700" alt="Encurtar manga" loading="lazy" decoding="async"></picture><span class="num c5">5</span></div><div class="info"><h3>Encurtar manga</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 40</span></div></li>
+      <li class="card conserto"><div class="ft"><picture><source type="image/avif" srcset="assets/img/conserto-alca-400.avif 400w, assets/img/conserto-alca-700.avif 700w" sizes="(min-width: 640px) 340px, 46vw"><img src="assets/img/conserto-alca-700.webp" srcset="assets/img/conserto-alca-400.webp 400w, assets/img/conserto-alca-700.webp 700w" sizes="(min-width: 640px) 340px, 46vw" width="700" height="700" alt="Ajuste de alça" loading="lazy" decoding="async"></picture><span class="num c1">6</span></div><div class="info"><h3>Ajuste de alça</h3><span class="preco-chip"><small>cobra-se</small>R$ 20 a 35</span></div></li>
     </ul>
     <div class="mais12">+ 95 consertos <em>no pack</em></div>
 
@@ -614,7 +618,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
 
     <div class="bonus-grade">
       <div class="bonus-capa">
-        <img src="assets/fotos/mockup-bonus.webp" width="700" height="875" alt="Kit de divulgação: post para Instagram, cartaz para imprimir e modelo de mensagem" loading="lazy" decoding="async">
+        <picture><source type="image/avif" srcset="assets/img/bonus-400.avif 400w, assets/img/bonus-720.avif 720w" sizes="(min-width: 980px) 380px, 72vw"><img src="assets/img/bonus-720.webp" srcset="assets/img/bonus-400.webp 400w, assets/img/bonus-720.webp 720w" sizes="(min-width: 980px) 380px, 72vw" width="720" height="900" alt="Kit de divulgação: post para Instagram, cartaz para imprimir e modelo de mensagem" loading="lazy" decoding="async"></picture>
       </div>
       <div>
         <ul class="bonus-lista">
@@ -630,7 +634,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
     </div>
 
     <div class="card expert">
-      <figure><img src="assets/fotos/expert-maquina.webp" width="760" height="890" alt="" data-expert-alt loading="lazy" decoding="async"></figure>
+      <figure><picture><source type="image/avif" srcset="assets/img/expert-600.avif 600w"><img src="assets/img/expert-600.webp" srcset="assets/img/expert-600.webp 600w" width="600" height="703" alt="" data-expert-alt loading="lazy" decoding="async"></picture></figure>
       <div class="bio-box">
         <span class="rot">Quem preparou o pack</span>
         <p class="nome" data-expert="nome">Karina Eduarda</p>
@@ -653,13 +657,13 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
     <div class="carrossel-depo">
       <button class="carrossel-btn prev" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="carrossel-track" id="depoTrack">
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-1.webp" type="image/webp"><img src="assets/fotos/depoimento-1.png" width="1216" height="1293" alt="Depoimento de aluna com mensagens no WhatsApp e clientes agendando consertos" loading="lazy" decoding="async"></picture></div>
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-2.webp" type="image/webp"><img src="assets/fotos/depoimento-2.png" width="1208" height="1302" alt="Resumo financeiro e faturamento de aluna com consertos de roupas" loading="lazy" decoding="async"></picture></div>
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-3.webp" type="image/webp"><img src="assets/fotos/depoimento-3.png" width="1024" height="1536" alt="Depoimento de aluna sobre atendimento e clientes no WhatsApp" loading="lazy" decoding="async"></picture></div>
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-4.webp" type="image/webp"><img src="assets/fotos/depoimento-4.png" width="1149" height="1369" alt="Caderno com anotações de pedidos de conserto e agradecimento no WhatsApp" loading="lazy" decoding="async"></picture></div>
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-5.webp" type="image/webp"><img src="assets/fotos/depoimento-5.png" width="1024" height="1536" alt="Conversa com cliente confirmando entrega e pagamento de ajuste" loading="lazy" decoding="async"></picture></div>
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-6.webp" type="image/webp"><img src="assets/fotos/depoimento-6.png" width="878" height="1790" alt="Recibo financeiro e comprovante de pagamento no WhatsApp" loading="lazy" decoding="async"></picture></div>
-        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-7.webp" type="image/webp"><img src="assets/fotos/depoimento-7.png" width="1086" height="1448" alt="Mensagens de cliente sobre ajuste em três camisas" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-1-800.avif 800w"><img src="assets/img/depoimento-1-800.webp" srcset="assets/img/depoimento-1-800.webp 800w" alt="Depoimento de aluna com mensagens no WhatsApp e clientes agendando consertos" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-2-800.avif 800w"><img src="assets/img/depoimento-2-800.webp" srcset="assets/img/depoimento-2-800.webp 800w" alt="Resumo financeiro e faturamento de aluna com consertos de roupas" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-3-800.avif 800w"><img src="assets/img/depoimento-3-800.webp" srcset="assets/img/depoimento-3-800.webp 800w" alt="Depoimento de aluna sobre atendimento e clientes no WhatsApp" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-4-800.avif 800w"><img src="assets/img/depoimento-4-800.webp" srcset="assets/img/depoimento-4-800.webp 800w" alt="Caderno com anotações de pedidos de conserto e agradecimento no WhatsApp" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-5-800.avif 800w"><img src="assets/img/depoimento-5-800.webp" srcset="assets/img/depoimento-5-800.webp 800w" alt="Conversa com cliente confirmando entrega e pagamento de ajuste" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-6-800.avif 800w"><img src="assets/img/depoimento-6-800.webp" srcset="assets/img/depoimento-6-800.webp 800w" alt="Recibo financeiro e comprovante de pagamento no WhatsApp" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source type="image/avif" srcset="assets/img/depoimento-7-800.avif 800w"><img src="assets/img/depoimento-7-800.webp" srcset="assets/img/depoimento-7-800.webp 800w" alt="Mensagens de cliente sobre ajuste em três camisas" loading="lazy" decoding="async"></picture></div>
       </div>
       <button class="carrossel-btn next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
     </div>
@@ -681,7 +685,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
         <p class="t">Ajuste Certo completo</p>
         <p>Pagamento único · acesso para sempre</p>
       </div>
-      <img class="oferta-produto" src="assets/fotos/mockup-hero-celular.webp" width="800" height="800" alt="" loading="lazy" decoding="async">
+      <picture><source type="image/avif" srcset="assets/img/hero-720.avif 720w"><img src="assets/img/hero-720.webp" srcset="assets/img/hero-720.webp 720w" class="oferta-produto" width="720" height="720" alt="" loading="lazy" decoding="async"></picture>
       <ul class="oferta-lista">
         <li><span class="ck"><svg><use href="#i-check"/></svg></span><span><b>101 consertos ilustrados</b> passo a passo em PDF</span></li>
         <li><span class="ck"><svg><use href="#i-check"/></svg></span><span>Calças, zíperes, camisas, vestidos e reparos do dia a dia</span></li>
@@ -742,7 +746,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
       <div>
         <h2 class="tit">Risco zero: <span class="v">7 dias de garantia</span></h2>
         <p class="lead">Baixe o pack, teste na sua máquina e confira cada página. Se achar que não é para você, mande um e-mail em até 7 dias e devolvemos 100% do valor. Sem perguntas e sem burocracia.</p>
-        <p class="assina"><img src="assets/fotos/expert-avatar.webp" width="300" height="300" alt="" data-expert-alt loading="lazy"><span><b data-expert="assinatura">Karina Eduarda</b><small>autora do Ajuste Certo</small></span></p>
+        <p class="assina"><picture><source type="image/avif" srcset="assets/img/avatar-120.avif 120w"><img src="assets/img/avatar-120.webp" srcset="assets/img/avatar-120.webp 120w" width="120" height="120" alt="" data-expert-alt loading="lazy" decoding="async"></picture><span><b data-expert="assinatura">Karina Eduarda</b><small>autora do Ajuste Certo</small></span></p>
       </div>
     </div>
   </div>
@@ -796,7 +800,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
         </div>
       </div>
     </div>
-    <figure><img src="assets/fotos/mockup-hero-desktop.webp" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure>
+    <figure><picture><source type="image/avif" srcset="assets/img/final-600.avif 600w, assets/img/final-1000.avif 1000w" sizes="(min-width: 980px) 540px, 90vw"><img src="assets/img/final-1000.webp" srcset="assets/img/final-600.webp 600w, assets/img/final-1000.webp 1000w" sizes="(min-width: 980px) 540px, 90vw" width="1000" height="750" alt="" loading="lazy" decoding="async"></picture></figure>
   </div>
 </section>
 
@@ -882,7 +886,9 @@ const EXPERT = {
   if (CONFIG.checkout) document.querySelectorAll('.js-checkout').forEach(a => a.href = CONFIG.checkout);
   document.querySelectorAll('.js-scroll-preco').forEach(btn => btn.addEventListener('click', e => {
     e.preventDefault();
-    document.getElementById('preco').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // monta todas as seções antes de rolar, para o destino não mudar de posição no meio do caminho
+    document.documentElement.classList.add('cv-off');
+    requestAnimationFrame(() => document.getElementById('preco').scrollIntoView({ behavior: 'smooth', block: 'start' }));
   }));
   document.querySelectorAll('.js-checkout').forEach(a => a.addEventListener('click', () => {
     if (window.fbq) fbq('track', 'InitiateCheckout', { value: 19.90, currency: 'BRL' });
