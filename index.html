@@ -3,519 +3,431 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ajuste Certo · Monte seu Negócio de Conserto de Roupas em Casa</title>
-<meta name="description" content="Tudo o que você precisa para abrir seu próprio ateliê de consertos em casa. Especialize-se nos 18 consertos mais lucrativos e fature de R$ 4.300 a R$ 6.700 por mês.">
-<meta name="theme-color" content="#F3F6F8">
+<title>Ajuste Certo · 101 Consertos Ilustrados para sua Renda Extra com Costura</title>
+<meta name="description" content="Pack com 101 consertos ilustrados passo a passo na máquina de casa e artes prontas para divulgar. Acesso imediato por R$ 19,90.">
+<meta name="theme-color" content="#9E1218">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,700..900;1,62..125,700..900&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/fotos/mockup-hero-celular.webp" imagesrcset="assets/fotos/mockup-hero-celular.webp 800w, assets/fotos/mockup-hero-1200.webp 1200w" imagesizes="(min-width: 980px) 560px, 92vw">
 <!--
   ===================================================================
-  AJUSTE CERTO · página de vendas · Fábrica de Ofertas · v2 (ateliê)
+  AJUSTE CERTO · página de vendas · Fábrica de Ofertas · v4
   -------------------------------------------------------------------
-  Conceito: a página é uma mesa de corte. Fundo = base de corte verde;
-  conteúdo = folhas de molde, envelope, fita métrica, tag e etiqueta.
-  Assinatura: a linha de costura na margem é pespontada conforme a
-  leitora rola a página (desligada para quem pede menos movimento).
-
+  Visual alinhado aos criativos de anúncio (amarelo, vinho, marinho).
+  Tipografia: Archivo condensada (títulos) + Nunito (texto).
   ANTES DE SUBIR O TRÁFEGO, preencha o bloco CONFIG no fim do arquivo.
-  Os números do produto (4 guias, 18 consertos, mais de 80 itens na
-  tabela, bônus no 7º dia) são a especificação do entregável.
   ===================================================================
 -->
 <style>
 :root{
-  --mat:#F3F6F8;        /* base clara */
-  --mat-esc:#2F4657;
-  --grade:rgba(86,119,138,.06);
-  --grade-forte:rgba(86,119,138,.13);
-  --giz:#23272C;        /* texto sobre a base clara */
-  --giz-2:#4F5862;
-  --papel:#F1EBD8;      /* papel de molde */
-  --tinta:#1F2A36;      /* impressão do molde */
-  --tinta-2:#4B5560;
-  --marca:#C8392F;      /* marcação vermelha do molde e linha */
-  --fita:#F3C234;       /* fita métrica */
-  --fita-esc:#B98E14;
-  --kraft:#CFAD7C;
-  --cetim:#FBF9F3;
-  --max:1080px;
-  --cm:20px;            /* escala da fita métrica */
-  --fio-x:12px;         /* posição da costura */
-  --display:"Kalam","Segoe Print","Comic Sans MS",cursive;
-  --texto:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --giz-fonte:"Kalam","Segoe Print","Comic Sans MS",cursive;
-  --jeans:#3E5A6E;
+  --amarelo:#FFD22E;
+  --amarelo-claro:#FFE680;
+  --amarelo-esc:#E0AE00;
+  --creme:#FFF8E1;
+  --vermelho:#E02424;
+  --vinho:#9E1218;
+  --vinho-esc:#690A0F;
+  --marinho:#14215A;
+  --marinho-esc:#0C1540;
+  --texto:#1B2147;
+  --texto-2:#4A5175;
+  --linha:rgba(20,33,90,.1);
+  --verde:#18A048;
+  --azul:#1F6FDB;
+  --roxo:#7A3FC6;
+  --laranja:#F0861A;
+  --raio:20px;
+  --sombra:0 1px 0 rgba(20,33,90,.06),0 18px 36px -16px rgba(20,33,90,.32);
+  --sombra-forte:0 2px 0 rgba(20,33,90,.08),0 28px 50px -18px rgba(20,33,90,.45);
+  --display:"Archivo","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --corpo:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --max:1140px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:hidden}
-body{
-  position:relative;overflow-x:hidden;
-  font-family:var(--texto);font-size:17px;line-height:1.55;color:var(--giz);
-  background:
-    linear-gradient(var(--grade-forte) 1px,transparent 1px) 0 0/120px 120px,
-    linear-gradient(90deg,var(--grade-forte) 1px,transparent 1px) 0 0/120px 120px,
-    linear-gradient(var(--grade) 1px,transparent 1px) 0 0/24px 24px,
-    linear-gradient(90deg,var(--grade) 1px,transparent 1px) 0 0/24px 24px,
-    var(--mat);
-  -webkit-font-smoothing:antialiased;
-}
-svg{display:block}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--fita);outline-offset:3px;border-radius:4px}
-
-.wrap{width:100%;max-width:calc(var(--max) + 64px);margin:0 auto;padding:0 16px 0 34px}
-section{padding:64px 0}
-h1,h2,h3{font-family:var(--display);font-stretch:normal;font-weight:700;line-height:1.1;letter-spacing:-.005em;font-variation-settings:"opsz" 96}
-h1{font-size:clamp(38px,10vw,66px)}
-h2{font-size:clamp(30px,7.6vw,48px);margin-bottom:16px}
-h3{font-size:24px;line-height:1.05;font-stretch:85%}
-p{max-width:34em}
-.lead{font-size:clamp(18px,4.6vw,21px);line-height:1.5;color:var(--giz-2)}
-.giz{font-family:var(--giz-fonte);color:var(--jeans);font-size:22px;line-height:1;transform:rotate(-3deg);display:inline-block}
-
-/* borda numerada da base de corte */
-.borda{display:flex;height:26px;overflow:hidden;font:600 11px/26px var(--texto);color:var(--giz-2);opacity:.7;border-bottom:1px solid var(--grade-forte);user-select:none}
-.borda span{flex:0 0 120px;padding-left:4px}
-
-/* ---------- costura que acompanha o scroll ---------- */
-#fio{position:absolute;left:var(--fio-x);top:26px;width:3px;height:0;z-index:5;pointer-events:none;
-  background:repeating-linear-gradient(to bottom,var(--marca) 0 9px,transparent 9px 15px);border-radius:2px}
-#agulha{position:absolute;left:-4px;top:100%;width:11px;height:70px;transition:opacity .3s}
-.sem-mov #agulha{opacity:0}
-
-/* ---------- botão: fita métrica ---------- */
-.cta{
-  position:relative;display:flex;align-items:center;justify-content:center;
-  width:100%;max-width:440px;min-height:64px;padding:22px 24px 16px;
-  font:750 21px/1.1 var(--display);font-stretch:85%;color:var(--tinta);text-decoration:none;
-  background:
-    repeating-linear-gradient(90deg,var(--tinta) 0 1.5px,transparent 1.5px 20px) 0 0/100% 11px no-repeat,
-    repeating-linear-gradient(90deg,var(--tinta) 0 1px,transparent 1px 10px) 0 0/100% 6px no-repeat,
-    var(--fita);
-  border-radius:3px;box-shadow:0 4px 0 var(--fita-esc),0 12px 22px rgba(0,0,0,.28);
-  transition:transform .1s,box-shadow .1s;-webkit-tap-highlight-color:transparent;
-}
-.cta:hover{transform:translateY(-1px)}
-.cta:active{transform:translateY(3px);box-shadow:0 1px 0 var(--fita-esc),0 5px 10px rgba(0,0,0,.25)}
-
-.garantias{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:14px;font-size:15px;color:var(--giz-2)}
-.garantias span{display:inline-flex;align-items:center;gap:7px}
-.garantias svg{width:17px;height:17px;flex:none}
-
-/* ---------- folha de molde (papel com piques) ---------- */
-.folha{position:relative;filter:drop-shadow(0 1px 0 rgba(0,0,0,.22)) drop-shadow(0 12px 18px rgba(0,0,0,.26))}
-.papel{
-  color:var(--tinta);padding:30px 22px;
-  background:radial-gradient(circle,rgba(31,42,54,.11) 1px,transparent 1.4px) 0 0/24px 24px,var(--papel);
-  clip-path:polygon(0 0,100% 0,100% 54px,calc(100% - 10px) 64px,100% 74px,100% calc(100% - 74px),calc(100% - 10px) calc(100% - 64px),100% calc(100% - 54px),100% 100%,0 100%,0 calc(100% - 54px),10px calc(100% - 64px),0 calc(100% - 74px),0 74px,10px 64px,0 54px);
-}
-.papel .lead{color:var(--tinta-2)}
-
-/* ============ 1. HERO ============ */
-.topo-logo{display:flex;justify-content:center;padding:26px 0 0}
-.topo-logo img{display:block;width:clamp(190px,52vw,280px);height:auto}
-.hero{padding:26px 0 72px;overflow-x:clip}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--corpo);font-size:17px;line-height:1.6;color:var(--texto);background:var(--creme);-webkit-font-smoothing:antialiased;overflow-x:clip}
+html{overflow-x:clip}
 main{overflow-x:clip}
-.hero h1{color:var(--giz);margin-bottom:18px;max-width:11.5em}
-.hero .lead{margin-bottom:8px}
-.palco{position:relative;margin:34px 0 26px;padding:0 6px}
-.envelope{
-  position:relative;width:min(100%,330px);margin:0 auto;transform:rotate(-2.5deg);
-  filter:drop-shadow(0 2px 0 rgba(0,0,0,.2)) drop-shadow(0 22px 26px rgba(0,0,0,.35));
-}
-.env{background:linear-gradient(160deg,#F7F1DF,#EADFC3);color:var(--tinta);padding:16px 16px 14px;border-radius:2px}
-.env-topo{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--tinta);padding-bottom:6px}
-.env-marca{font:800 34px/0.9 var(--display);font-stretch:75%;letter-spacing:-.01em}
-.env-ed{font-size:12px;font-weight:700}
-.env-sub{font-size:13px;line-height:1.3;margin:8px 0 6px;max-width:none}
-.env-arte{position:relative;height:200px;border:1.5px solid var(--tinta);background:#FBF7EB;display:grid;place-items:center;overflow:hidden}
-.env-arte svg{height:178px;width:auto}
-.env-arte .anot{position:absolute;font-family:var(--giz-fonte);color:var(--marca);font-size:22px;line-height:1}
-.env-tab{width:100%;border-collapse:collapse;margin-top:10px;font-size:11px;text-align:center;line-height:1.2}
-.env-tab th,.env-tab td{border:1.2px solid var(--tinta);padding:4px 2px}
-.env-tab th{font:800 15px/1 var(--display);font-stretch:80%}
-.carimbo{
-  position:absolute;right:-12px;top:-16px;width:84px;height:84px;border-radius:50%;
-  display:grid;place-items:center;text-align:center;transform:rotate(12deg);
-  color:var(--marca);border:2.5px solid var(--marca);background:rgba(241,235,216,.92);
-  font:800 13px/1.05 var(--display);font-stretch:80%;
-}
-.carimbo::before{content:"";position:absolute;inset:4px;border:1.2px dashed var(--marca);border-radius:50%}
-.alfinete{position:absolute;left:18px;top:-18px;width:26px;height:70px;transform:rotate(-24deg);z-index:2}
-.nota-giz{position:relative;display:block;margin:20px 0 0 auto;width:max-content;max-width:100%;text-align:right;white-space:nowrap;font-size:clamp(21px,6.6vw,28px)}
-.nota-giz svg{position:absolute;left:-46px;top:-26px;width:44px;height:36px;color:var(--giz)}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--marinho);outline-offset:3px;border-radius:6px}
+b,strong{font-weight:900}
+h1,h2,h3,.faixa,.sub{text-wrap:balance}
+p{text-wrap:pretty;max-width:40em}
 
-/* ============ SEQUÊNCIA M.A.C. COMPACTA ============ */
-.mac-resumo{
-  background:var(--papel);color:var(--tinta);padding:18px 20px;margin:24px 0 28px;
-  border-radius:2px;border-left:4px solid var(--marca);
-  box-shadow:0 1px 0 rgba(0,0,0,.15),0 8px 16px rgba(0,0,0,.22);
-}
-.mac-badgeline{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
-.mac-badge{
-  display:inline-flex;align-items:center;gap:6px;padding:4px 12px;
-  background:#fff;border:1.5px solid var(--tinta);border-radius:3px;
-  font-size:14px;font-weight:700;color:var(--tinta);
-}
-.mac-badge b{font-family:var(--giz-fonte);font-size:22px;color:var(--jeans);line-height:1}
-.mac-resumo p{font-size:15px;line-height:1.45;color:var(--tinta-2);margin:0}
-.mac-resumo p b{color:var(--tinta)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+section{position:relative;padding:72px 0}
+.centro{text-align:center}
+.centro p{margin-left:auto;margin-right:auto}
 
-/* ============ 5. O QUE VOCÊ RECEBE ============ */
-.itens{list-style:none;display:grid;gap:26px;margin-top:30px}
-.item{display:grid;grid-template-columns:118px 1fr;gap:18px;align-items:start}
-.mini{position:relative;width:104px;height:138px;background:linear-gradient(160deg,#F7F1DF,#E8DCBF);color:var(--tinta);padding:7px 7px 6px;
-  box-shadow:0 1px 0 rgba(0,0,0,.2),0 10px 16px rgba(0,0,0,.28);display:flex;flex-direction:column;transform:rotate(-1.5deg)}
-.item:nth-child(even) .mini{transform:rotate(1.5deg)}
-.mini .mt{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--tinta);padding-bottom:3px;font:800 13px/1 var(--display);font-stretch:75%}
-.mini .mt b{font-size:22px}
-.mini .ma{flex:1;display:grid;place-items:center;border:1px solid var(--tinta);margin-top:5px;background:#FBF7EB}
-.mini .ma svg{height:62px;width:auto}
-.mini .mn{font:800 12.5px/1.05 var(--display);font-stretch:78%;margin-top:5px;text-align:center}
-.item h3{color:var(--giz);margin:4px 0 6px}
-.item p{color:var(--giz-2);font-size:16px}
-.item.bonus .mini{background:linear-gradient(160deg,#FCE7A6,#F0CB62)}
-.item.bonus .capa-item .carimbo{right:-12px;top:-16px;width:58px;height:58px;font-size:10px;background:rgba(252,231,166,.95)}
-.formato{display:flex;gap:12px;align-items:center;margin-top:34px;color:var(--giz-2);font-size:16px}
-.formato svg{width:40px;height:40px;flex:none;color:var(--jeans)}
+/* ---------- tipografia ---------- */
+.d{font-family:var(--display);font-weight:900;font-stretch:66%;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
+.tit{font-family:var(--display);font-weight:900;font-stretch:66%;text-transform:uppercase;line-height:.92;letter-spacing:-.005em;color:var(--marinho);font-size:clamp(34px,9vw,66px)}
+.tit .v{color:var(--vermelho)}
+.tit .am{color:var(--amarelo)}
+.sub{font-weight:900;font-size:clamp(17px,4.4vw,22px);line-height:1.3;color:var(--marinho)}
+.lead{font-size:clamp(16.5px,4.1vw,19px);line-height:1.6;color:var(--texto-2)}
+.lead b{color:var(--texto)}
 
-/* ============ 6. PREÇO: tag de loja ============ */
-.preco{text-align:center}
-.preco .lead{margin:0 auto}
-.tag-area{position:relative;max-width:420px;margin:24px auto 0;padding-top:70px}
-.barbante{position:absolute;left:50%;top:0;width:120px;height:110px;margin-left:-60px;color:#D9C9A0;z-index:2;pointer-events:none}
-.tag{position:relative;filter:drop-shadow(0 2px 0 rgba(0,0,0,.2)) drop-shadow(0 18px 24px rgba(0,0,0,.35))}
-.tag-corpo{
-  background:
-    radial-gradient(circle at 50% 30px,var(--mat) 0 9px,#E8E2CF 9px 15px,rgba(0,0,0,0) 15.5px),
-    linear-gradient(180deg,rgba(255,255,255,.08),rgba(0,0,0,.04)),
-    var(--kraft);
-  clip-path:polygon(20% 0,80% 0,100% 54px,100% 100%,0 100%,0 54px);
-  color:#2A2118;padding:62px 22px 26px;text-align:left;
-}
-.tag-corpo::after{content:"";position:absolute;inset:66px 10px 10px;border:1.5px dashed rgba(42,33,24,.35);pointer-events:none}
-.tag .marca{font:800 26px/1 var(--display);font-stretch:75%;text-align:center;margin-bottom:14px}
-.tag ul{list-style:none;display:grid;gap:8px;font-size:16px;line-height:1.3}
-.tag li{display:grid;grid-template-columns:20px 1fr;gap:9px}
-.tag li svg{width:18px;height:18px;color:var(--marca);margin-top:2px}
-.valores{text-align:center;margin:20px 0 4px;padding-top:18px;border-top:2px solid rgba(42,33,24,.75)}
-.ref{font-size:15px}
-.ref s{font-weight:700;font-family:var(--display);font-stretch:85%;font-size:17px}
-.valor{font:900 92px/0.9 var(--texto);font-stretch:75%;letter-spacing:-.02em;margin:8px 0 2px}
-.valor small{font-size:.45em;vertical-align:top;position:relative;top:.18em;margin-right:4px}
-.valor sup{font-size:.4em;vertical-align:top;position:relative;top:.2em}
-.unico{font-size:15px;font-weight:700;margin-bottom:18px}
-.bump{position:relative;display:grid;grid-template-columns:24px 1fr;gap:12px;text-align:left;
-  background:var(--cetim);color:var(--tinta);padding:14px 14px 14px 12px;margin:0 0 22px;
-  border:1.5px dashed var(--marca);transform:rotate(-.8deg)}
-.bump .caixa{width:22px;height:22px;border:2px solid var(--tinta);border-radius:3px;margin-top:2px;background:#fff}
-.bump b{display:block;font-family:var(--texto);font-weight:800;font-size:16px;line-height:1.1;margin-bottom:4px}
-.bump p{font-size:14.5px;line-height:1.4;color:var(--tinta-2)}
-.bump em{font-style:normal;font-size:13px;font-weight:700;color:var(--marca);display:block;margin-bottom:3px}
-.tag .cta{max-width:none}
-.tag .garantias{justify-content:center;color:#3E3326}
+/* cabeçalho de seção */
+.cab{max-width:820px;margin:0 auto;text-align:center}
+.cab .tit{margin:14px 0 14px}
+.cab .lead{max-width:36em}
 
-/* ============ CARROSSEL MINIMALISTA DE DEPOIMENTOS ============ */
-.secao-depoimentos{padding-top:32px;padding-bottom:12px}
-.carrossel-depo{
-  position:relative;display:flex;align-items:center;justify-content:center;
-  margin:24px auto 0;max-width:580px;width:100%;
-}
-.carrossel-track{
-  display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
-  scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:10px 4px 18px;width:100%;
-}
-.carrossel-track::-webkit-scrollbar{display:none}
-.carrossel-slide{
-  flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;
-  display:flex;justify-content:center;align-items:center;
-  border-radius:8px;overflow:hidden;background:#fff;
-  box-shadow:0 3px 8px rgba(0,0,0,.08),0 14px 28px rgba(0,0,0,.15);
-  border:1px solid rgba(0,0,0,.08);
-}
-.carrossel-slide picture{width:100%;display:flex;justify-content:center;background:#fff}
-.carrossel-slide img{
-  display:block;width:100%;height:auto;max-height:680px;object-fit:contain;
-}
-.carrossel-btn{
-  position:absolute;z-index:10;top:50%;transform:translateY(-50%);
-  width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.94);
-  color:var(--tinta);border:1px solid rgba(0,0,0,.15);
-  display:grid;place-items:center;box-shadow:0 3px 12px rgba(0,0,0,.18);
-  cursor:pointer;transition:transform .15s, background .15s, color .15s;
-  padding:0;
-}
-.carrossel-btn:hover{background:#fff;transform:translateY(-50%) scale(1.08);color:var(--marca)}
-.carrossel-btn:active{transform:translateY(-50%) scale(.96)}
-.carrossel-btn.prev{left:-22px}
-.carrossel-btn.next{right:-22px}
-@media(max-width:660px){
-  .carrossel-btn.prev{left:6px}
-  .carrossel-btn.next{right:6px}
-}
-.carrossel-paginacao{
-  display:flex;justify-content:center;align-items:center;gap:8px;margin-top:14px;
-}
-.carrossel-dot{
-  width:9px;height:9px;border-radius:50%;background:rgba(0,0,0,.22);
-  cursor:pointer;transition:all .2s;
-}
-.carrossel-dot.ativo{
-  width:24px;border-radius:5px;background:var(--marca);
-}
-.depos{display:grid;gap:18px;margin-top:26px}
-.depo{background:var(--papel);color:var(--tinta);padding:22px 20px;box-shadow:0 1px 0 rgba(0,0,0,.2),0 10px 16px rgba(0,0,0,.25)}
-.depo blockquote{font-size:18px;line-height:1.5}
-.depo figcaption{margin-top:12px;font-size:14px;color:var(--tinta-2)}
-.depo figcaption b{color:var(--tinta);font-family:var(--display);font-stretch:85%;font-size:17px}
-.instrucoes{margin-top:26px;max-width:520px}
-.instrucoes .papel{padding:26px 22px 28px}
-.inst-topo{display:flex;justify-content:space-between;gap:10px;font-size:13px;font-weight:700;padding-bottom:8px;border-bottom:3px solid var(--tinta)}
-.instrucoes h3{font-size:28px;margin:14px 0 10px}
-.fichas{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-.fichas span{font-size:13px;font-weight:700;padding:3px 9px;border:1.5px solid var(--tinta);border-radius:2px}
-.etapas{list-style:none;display:grid;gap:14px;counter-reset:e}
-.etapas li{display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:center;counter-increment:e;font-size:15.5px;line-height:1.4}
-.etapas .des{position:relative;height:78px;overflow:hidden;border:1.5px solid var(--tinta);background:#FBF7EB;display:grid;place-items:center}
-.etapas .des::before{content:counter(e);position:absolute;z-index:2;left:-1.5px;top:-1.5px;width:22px;height:22px;background:var(--tinta);color:var(--papel);font:800 13px/22px var(--display);text-align:center}
-.etapas .des svg{width:46px;height:46px;color:var(--tinta)}
-.etapas .des img{height:100%;object-fit:cover}
-.etapas .des .reserva{display:grid;place-items:center;width:100%;height:100%}
-.etapas .des.foto{display:block}
-.dica{margin-top:16px;font-size:15px;padding-left:14px;border-left:3px solid var(--marca)}
-.legenda{margin-top:16px;font-size:15px;color:var(--giz-2)}
+/* faixa vinho (headline em caixa, como nos criativos) */
+.faixa{display:inline-block;font-family:var(--display);font-weight:900;font-stretch:70%;text-transform:uppercase;color:#fff;line-height:1.02;letter-spacing:.005em;
+  background:linear-gradient(180deg,#C81C24,var(--vinho));padding:.24em .55em .22em;border-radius:12px;
+  border:3px solid #fff;box-shadow:0 5px 0 var(--vinho-esc),0 16px 28px -10px rgba(105,10,15,.6)}
+.faixas{display:flex;flex-direction:column;align-items:center;gap:12px}
+.faixas .faixa{font-size:clamp(21px,5.9vw,46px)}
+.faixas .faixa:nth-child(1){transform:rotate(-1.2deg)}
+.faixas .faixa:nth-child(2){background:linear-gradient(180deg,var(--vinho),#7A0D12);transform:rotate(.8deg)}
 
-/* ============ 8. GARANTIA: etiqueta de roupa ============ */
-.garantia .grade{display:grid;gap:30px;align-items:center}
-.etiqueta{position:relative;width:min(100%,300px);margin:0 auto;transform:rotate(-2deg);
-  background:repeating-linear-gradient(90deg,rgba(31,42,54,.035) 0 1px,transparent 1px 3px),var(--cetim);
-  color:var(--tinta);text-align:center;padding:40px 20px 24px;
-  box-shadow:0 1px 0 rgba(0,0,0,.18),0 14px 22px rgba(0,0,0,.3)}
-.etiqueta::before{content:"";position:absolute;left:0;right:0;top:0;height:22px;background:linear-gradient(#E9E5D9,#F6F3EA);border-bottom:1px solid #DCD6C6}
-.etiqueta::after{content:"";position:absolute;left:12px;right:12px;top:10px;border-top:2px dashed var(--marca)}
-.etiqueta .marca{font:800 22px/1 var(--display);font-stretch:75%;letter-spacing:.02em}
-.simbolos{display:flex;justify-content:center;gap:12px;margin:16px 0}
-.simbolos svg{width:34px;height:30px;color:var(--tinta)}
-.etiqueta p{font-size:15px;line-height:1.4;margin:0 auto}
-.etiqueta .grande{font:800 30px/1 var(--display);font-stretch:78%;margin-bottom:8px}
+/* etiqueta pequena */
+.kicker{display:inline-flex;align-items:center;gap:8px;font-weight:900;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--vinho);
+  background:#fff;padding:7px 14px 7px 12px;border-radius:999px;box-shadow:0 2px 0 rgba(20,33,90,.1);white-space:nowrap}
+.kicker i{width:8px;height:8px;border-radius:50%;background:var(--vermelho);box-shadow:0 0 0 4px rgba(224,36,36,.18)}
+.kicker.esc{background:var(--marinho);color:#fff}
+.kicker.esc i{background:var(--amarelo);box-shadow:0 0 0 4px rgba(255,210,46,.25)}
 
+/* raios decorativos ao lado do subtítulo */
+.raios{display:inline-flex;align-items:center;gap:10px}
+.raios::before,.raios::after{content:"";width:22px;height:18px;flex:none;
+  background:linear-gradient(var(--vermelho),var(--vermelho)) 0 0/100% 3.5px no-repeat,linear-gradient(var(--vermelho),var(--vermelho)) 0 50%/78% 3.5px no-repeat,linear-gradient(var(--vermelho),var(--vermelho)) 0 100%/100% 3.5px no-repeat}
+.raios::before{transform:skewY(-14deg)}
+.raios::after{transform:scaleX(-1) skewY(-14deg)}
 
-/* selo de garantia bordado */
-.selo-garantia{width:min(78vw,280px);margin:0 auto;transform:rotate(-7deg);filter:drop-shadow(0 2px 0 rgba(0,0,0,.18)) drop-shadow(0 16px 20px rgba(0,0,0,.35))}
-.selo-garantia svg{width:100%;height:auto;overflow:visible}
+/* ---------- botão ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:500px;min-height:76px;padding:14px 26px;
+  font-family:var(--display);font-weight:900;font-stretch:70%;font-size:clamp(27px,7.4vw,36px);line-height:1;text-transform:uppercase;letter-spacing:.01em;color:#fff;text-decoration:none;
+  background:linear-gradient(180deg,#D9252C 0%,var(--vinho) 100%);border:4px solid var(--amarelo);border-radius:999px;
+  box-shadow:0 0 0 4px #fff,0 7px 0 4px var(--vinho-esc),0 24px 36px -12px rgba(105,10,15,.65);
+  overflow:hidden;isolation:isolate;transition:transform .12s,box-shadow .12s;-webkit-tap-highlight-color:transparent}
+.btn em{font-style:normal;color:var(--amarelo)}
+.btn svg{width:.9em;height:.9em;flex:none}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-120%);animation:brilho 4.5s ease-in-out 1.5s infinite}
+@keyframes brilho{0%,60%{transform:translateX(-120%)}85%,100%{transform:translateX(120%)}}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(5px);box-shadow:0 0 0 4px #fff,0 2px 0 4px var(--vinho-esc),0 8px 14px -6px rgba(105,10,15,.5)}
+.btn-area{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:30px}
+.ancora{font-weight:800;font-size:14.5px;color:var(--texto-2)}
+.ancora s{color:var(--vermelho)}
+.ancora b{color:var(--verde);font-size:16px}
 
-/* ============ 9. FAQ ============ */
-.faq{margin-top:22px}
-.faq details{border-bottom:1.5px dashed var(--tinta-2)}
-.faq details:last-child{border-bottom:0}
-.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 26px;gap:14px;align-items:center;padding:18px 0;font:800 17px/1.3 var(--texto)}
-.faq summary::-webkit-details-marker{display:none}
-.faq .x{position:relative;width:22px;height:22px;transition:transform .25s}
-.faq .x::before,.faq .x::after{content:"";position:absolute;left:50%;top:50%;width:20px;height:3px;margin:-1.5px 0 0 -10px;background:var(--marca);border-radius:2px}
-.faq .x::after{transform:rotate(90deg)}
-.faq details[open] .x{transform:rotate(45deg)}
-.faq details p{padding:0 0 20px;font-size:16.5px;color:var(--tinta-2)}
+.confianca{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font-size:13.5px;font-weight:800;color:var(--marinho)}
+.confianca span{display:inline-flex;align-items:center;gap:6px}
+.confianca svg{width:17px;height:17px;color:var(--verde)}
 
-/* ============ 10. CTA FINAL ============ */
-.final{padding:72px 0 88px}
-.final h2{font-size:clamp(38px,10vw,72px);max-width:12em}
-.final .lead{margin-bottom:28px}
-.no{width:40px;height:30px;color:var(--marca);margin:-6px 0 18px -30px}
+/* check redondo */
+.ck{flex:none;width:28px;height:28px;border-radius:50%;background:var(--verde);display:grid;place-items:center;color:#fff;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
+.ck svg{width:16px;height:16px}
 
-/* ============ 11. RODAPÉ ============ */
-.rodape{background:var(--mat-esc);color:rgba(255,255,255,.78);font-size:14px;line-height:1.65;padding:40px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--grade-forte)}
-.rodape .marca{font:800 24px/1 var(--display);color:#fff;margin-bottom:10px}
-.rodape .botoes{display:flex;flex-wrap:wrap;gap:4px 20px;margin:12px 0}
-.rodape button{background:none;border:0;padding:12px 0;color:#fff;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
-.rodape .aviso{margin-top:14px;font-size:12.5px;opacity:.8;max-width:46em}
+/* pílulas */
+.pilulas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pilula{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;background:#fff;border-radius:16px;padding:14px 8px 12px;box-shadow:var(--sombra);border:2px solid rgba(20,33,90,.05);
+  font-weight:900;font-size:13.5px;line-height:1.15;color:var(--marinho)}
 
-dialog{border:0;padding:0;max-width:600px;width:calc(100% - 28px);max-height:86vh;color:var(--tinta);background:var(--papel);box-shadow:0 30px 80px rgba(0,0,0,.45)}
-dialog::backdrop{background:rgba(20,40,32,.7)}
-.dlg{padding:26px 22px;overflow:auto;max-height:86vh;font-size:15.5px;line-height:1.6}
-.dlg h3{font-size:28px;margin-bottom:10px}
-.dlg h4{font-family:var(--display);font-stretch:85%;font-size:18px;margin:16px 0 4px}
-.fechar{position:sticky;top:0;float:right;width:40px;height:40px;border:1.5px solid var(--tinta);background:var(--papel);font-size:22px;cursor:pointer;margin:-8px -8px 0 0}
+/* selo de preço */
+.selo{position:absolute;aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 35% 30%,#F23B3B,#B3141B 70%);border:5px solid #fff;
+  box-shadow:inset 0 0 0 4px var(--amarelo),0 18px 30px -8px rgba(105,10,15,.55);transform:rotate(-8deg);color:#fff;text-align:center}
+.selo .s1{font-family:var(--display);font-weight:900;font-stretch:72%;text-transform:uppercase;line-height:1;font-size:.15em}
+.selo .s2{font-family:var(--display);font-weight:900;font-style:italic;font-stretch:80%;line-height:.92;color:var(--amarelo);text-shadow:0 3px 0 var(--vinho-esc);font-size:.36em;letter-spacing:-.02em}
+.selo .s2 small{font-size:.42em;vertical-align:top;position:relative;top:.38em;margin-right:2px}
+.selo .s2 sup{font-size:.42em;vertical-align:top;position:relative;top:.32em}
 
+/* cartão branco */
+.card{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);border:2px solid rgba(20,33,90,.05)}
 
-/* ============ FOTOS (espaços para imagens de IA) ============ */
-/* A foto só aparece depois de carregar. Sem o arquivo, entra a ilustração reserva
-   (ou o bloco some). Abra a página com ?slots no fim do endereço para ver todos os espaços. */
-.foto{position:relative;margin:0}
-.foto img{display:none;width:100%;height:auto}
-.foto.com-foto img{display:block}
-.foto.com-foto .reserva{display:none}
-.foto-solta:not(.com-foto){display:none}
-.slot{display:none}
-.mostrar-slots .foto:not(.com-foto){display:block}
-.mostrar-slots .foto:not(.com-foto) .slot{display:flex;position:absolute;inset:0;z-index:4;align-items:center;justify-content:center;text-align:center;padding:10px;
-  background:rgba(243,194,52,.88);color:var(--tinta);font:700 13px/1.3 var(--texto);border:2px dashed var(--tinta)}
-.mostrar-slots .foto-solta:not(.com-foto){aspect-ratio:var(--ar,4/3);background:var(--papel)}
+/* números coloridos */
+.num{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-stretch:80%;font-size:20px;color:#fff;box-shadow:inset 0 -3px 0 rgba(0,0,0,.18),0 0 0 3px #fff}
+.c1{background:var(--vermelho)}.c2{background:var(--azul)}.c3{background:var(--verde)}.c4{background:var(--roxo)}.c5{background:var(--laranja)}
+.chip{display:inline-block;font-weight:900;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;border-radius:6px;padding:3px 9px}
 
-/* mockup do hero */
-.mockup-hero img{max-width:460px;margin:0 auto;filter:drop-shadow(0 18px 24px rgba(0,0,0,.3))}
+/* fundos */
+.fundo-sol{background:
+  repeating-conic-gradient(from 0deg at 50% 34%,rgba(255,255,255,.17) 0 6deg,transparent 6deg 14deg),
+  radial-gradient(ellipse at 50% 30%,#FFF1A8 0%,var(--amarelo) 60%)}
+.fundo-amarelo{background:var(--amarelo)}
+.fundo-creme{background:var(--creme)}
+.fundo-marinho{background:radial-gradient(ellipse at 50% 0%,#24357F 0%,var(--marinho) 65%);color:#fff}
+.fundo-marinho .tit{color:#fff}
+.fundo-marinho .lead{color:rgba(255,255,255,.82)}
+.fundo-marinho .lead b{color:#fff}
 
-/* capas em 3D no "O que você recebe" */
-.capa-item{width:100%}
-.capa-item img{filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
-.capa-item .carimbo{z-index:3}
-.mostrar-slots .capa-item:not(.com-foto){aspect-ratio:4/5}
+/* ============ TOPO ============ */
+.aviso-topo{background:var(--vinho);color:#fff;text-align:center;font-weight:900;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding:9px 12px;border-bottom:3px solid var(--amarelo)}
+.aviso-topo b{color:var(--amarelo)}
 
-/* galeria dos consertos */
-.galeria-tit{margin:46px 0 6px;color:var(--giz);font-size:clamp(24px,6vw,32px)}
-.galeria-sub{color:var(--giz-2);font-size:16px}
-.galeria{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;margin-top:18px}
-.tile{position:relative}
-.tile .foto{aspect-ratio:1/1;background:var(--papel);border:6px solid #fff;box-shadow:0 1px 0 rgba(0,0,0,.2),0 10px 16px rgba(0,0,0,.28);overflow:hidden}
-.tile .foto img{height:100%;object-fit:cover}
-.tile .reserva{position:absolute;inset:0;display:grid;place-items:center;
-  background:radial-gradient(circle,rgba(31,42,54,.1) 1px,transparent 1.4px) 0 0/16px 16px,var(--papel);color:var(--tinta)}
-.tile .reserva svg{width:58%;height:58%}
-.tile .selo-guia{position:absolute;right:-6px;bottom:30px;z-index:3;width:44px;height:58px;background:var(--papel);color:var(--tinta);
-  border:1.5px solid var(--tinta);box-shadow:0 4px 8px rgba(0,0,0,.3);transform:rotate(6deg);display:flex;flex-direction:column;align-items:center;justify-content:center;
-  font:800 9px/1 var(--display);font-stretch:80%;text-align:center;gap:2px}
-.tile .selo-guia b{font-size:20px}
-.tile .nome-tile{display:block;margin-top:9px;font:800 15.5px/1.25 var(--texto);color:var(--giz)}
-.galeria-mais{margin-top:18px;color:var(--giz-2);font-size:15.5px}
-.galeria-mais b{color:var(--jeans)}
+/* ============ HERO ============ */
+.hero{padding:22px 0 84px;overflow:hidden}
+.topo-logo{display:flex;justify-content:center;margin-bottom:16px}
+.topo-logo img{width:clamp(150px,40vw,210px);height:auto}
+.hero-grade{display:grid;grid-template-areas:"texto" "visual" "acoes";gap:0;align-items:center}
+.hero-texto{grid-area:texto;text-align:center}
+.hero-visual{grid-area:visual;position:relative;width:100%;max-width:520px;margin:18px auto 0}
+.hero-acoes{grid-area:acoes;text-align:center}
+.hero h1{font-family:var(--display);font-weight:900;text-transform:uppercase;color:var(--marinho);margin-top:14px;display:flex;align-items:center;justify-content:center;gap:.08em}
+.hero h1 .n18{font-style:italic;font-stretch:80%;color:var(--vermelho);font-size:clamp(76px,22vw,176px);line-height:.78;letter-spacing:-.05em;text-shadow:0 5px 0 var(--vinho-esc);padding-right:.04em}
+.hero h1 .resto{font-stretch:62%;font-size:clamp(38px,11vw,82px);line-height:.88;text-align:left;letter-spacing:-.01em}
+.hero .faixa{font-size:clamp(19px,5.2vw,31px);margin-top:16px;transform:rotate(-1deg);max-width:15em}
+.hero .sub{margin-top:16px}
+.hero-visual img{width:100%;height:auto;filter:drop-shadow(0 26px 30px rgba(120,70,0,.35))}
+.hero-visual .selo{right:-4px;bottom:2%;width:clamp(116px,31vw,164px);font-size:clamp(116px,31vw,164px)}
+.hero-acoes .lead{margin:6px auto 18px;max-width:30em}
 
-/* selos de confiança */
-.selos{list-style:none;display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:16px}
-.selos li{display:flex;align-items:center;gap:7px;font-size:12.5px;line-height:1.2;color:var(--giz-2)}
-.selos b{display:block;color:var(--giz);font-size:13px}
-.selos .sel{position:relative;flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--giz-2);color:var(--jeans)}
-.selos .sel::before{content:"";position:absolute;inset:3px;border-radius:50%;border:1px dashed rgba(62,90,110,.35)}
-.selos .sel svg{width:17px;height:17px}
-.tag .selos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;justify-items:center;margin-top:18px}
-.tag .selos li{flex-direction:column;text-align:center;gap:6px}
-.tag .selos li{color:#3E3326}
-.tag .selos b{color:#2A2118}
-.tag .selos .sel{border-color:#2A2118;color:var(--marca)}
-.tag .selos .sel::before{border-color:rgba(42,33,24,.35)}
+/* ============ TICKER ============ */
+.ticker-faixa{position:relative;z-index:3;overflow:hidden;margin-top:-34px;padding:14px 0}
+.ticker{position:relative;background:var(--marinho);color:#fff;overflow:hidden;border-top:4px solid var(--amarelo);border-bottom:4px solid var(--amarelo);padding:13px 0;
+  width:108%;margin-left:-4%;transform:rotate(-1.6deg);box-shadow:0 12px 24px -10px rgba(12,21,64,.5)}
+.ticker-trilho{display:flex;width:max-content;animation:rolar 34s linear infinite}
+.ticker ul{display:flex;list-style:none;flex:none}
+.ticker li{display:flex;align-items:center;gap:18px;padding-right:18px;font-family:var(--display);font-weight:900;font-stretch:70%;font-size:22px;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+.ticker li::after{content:"✦";color:var(--amarelo);font-size:15px}
+@keyframes rolar{to{transform:translateX(-50%)}}
 
-/* mockup no CTA final */
-.final .grade-final{display:grid;gap:26px;align-items:center}
-.final .foto-final img{max-width:420px;margin:0 auto;filter:drop-shadow(0 16px 22px rgba(0,0,0,.3))}
+/* ============ PRÉVIA ============ */
+#previa{padding-top:84px}
+.leque{display:flex;gap:16px;margin-top:30px;overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 20px 26px;margin-left:-20px;margin-right:-20px;scrollbar-width:none;overscroll-behavior-x:contain}
+.leque::-webkit-scrollbar{display:none}
+.pagina{flex:0 0 76%;scroll-snap-align:center;background:#fff;padding:10px;border-radius:16px;box-shadow:var(--sombra-forte);border:0;cursor:zoom-in;position:relative;transition:transform .2s}
+.pagina img{width:100%;height:auto;border-radius:8px;aspect-ratio:1200/1700;object-fit:cover;object-position:top}
+.pagina .rot{position:absolute;left:50%;top:-13px;transform:translateX(-50%);white-space:nowrap;background:var(--amarelo);color:var(--marinho);font-family:var(--display);font-weight:900;font-stretch:72%;font-size:16px;text-transform:uppercase;padding:6px 14px;border-radius:999px;box-shadow:0 3px 0 var(--amarelo-esc)}
+.pagina .lupa{position:absolute;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--marinho);color:#fff;display:grid;place-items:center;box-shadow:0 6px 14px rgba(20,33,90,.4)}
+.pagina .lupa svg{width:20px;height:20px}
+.dica-leque{font-size:13.5px;font-weight:800;color:var(--texto-2)}
 
-/* logo no rodapé */
-.rodape .logo-rodape{width:170px;height:auto;margin-bottom:12px}
+.mac{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:34px auto 0;max-width:760px}
+.mac .card{text-align:center;padding:16px 8px 16px}
+.mac b{display:block;font-family:var(--display);font-weight:900;font-stretch:80%;font-size:48px;line-height:1;color:var(--vermelho)}
+.mac .card:nth-child(2) b{color:var(--azul)}
+.mac .card:nth-child(3) b{color:var(--verde)}
+.mac strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--marinho);margin-top:4px}
+.mac small{display:block;font-size:12.5px;line-height:1.3;font-weight:700;color:var(--texto-2);margin-top:4px}
 
-@media (min-width:620px){
-  .selos{gap:12px 20px}
-  .selos li{font-size:13.5px;gap:9px}
-  .selos b{font-size:14px}
-  .selos .sel{width:40px;height:40px}
-  .galeria{grid-template-columns:repeat(3,1fr);gap:22px 18px}
-}
-@media (min-width:980px){
-  .mockup-hero img{max-width:520px}
-  .final .grade-final{grid-template-columns:1.1fr .9fr}
-  .final .foto-final{grid-column:2;grid-row:1}
-}
+/* ============ CONSERTOS ============ */
+.grade-consertos{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+.conserto{overflow:hidden;display:flex;flex-direction:column}
+.conserto .ft{position:relative;aspect-ratio:1;overflow:hidden;background:var(--creme)}
+.conserto .ft img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.conserto:hover .ft img{transform:scale(1.04)}
+.conserto .num{position:absolute;left:10px;top:10px;width:32px;height:32px;font-size:17px}
+.conserto .info{padding:12px 12px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;flex:1;text-align:left}
+.conserto h3{font-family:var(--display);font-weight:900;font-stretch:68%;text-transform:uppercase;font-size:20px;line-height:1;color:var(--marinho)}
+.preco-chip{white-space:nowrap;display:inline-flex;align-items:baseline;gap:5px;font-weight:900;font-size:13px;line-height:1.2;color:var(--verde);background:#E7F7EC;border-radius:999px;padding:4px 10px}
+.preco-chip small{display:none;font-size:10.5px;font-weight:800;color:var(--texto-2);text-transform:uppercase;letter-spacing:.05em}
+.mais12{display:block;text-wrap:balance;margin:22px auto 0;max-width:620px;background:var(--marinho);color:#fff;border-radius:14px;padding:14px 18px;font-family:var(--display);font-weight:900;font-stretch:70%;font-size:clamp(19px,5.2vw,28px);text-transform:uppercase;text-align:center;box-shadow:0 5px 0 var(--marinho-esc);transform:rotate(-.8deg)}
+.mais12 em{font-style:normal;color:var(--amarelo)}
 
+/* conta: o pack se paga */
+.paga{margin:40px auto 0;max-width:820px;padding:24px 20px;text-align:center}
+.paga-linha{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center}
+.paga-item{border-radius:16px;padding:16px 10px 14px;color:#fff}
+.paga-item.pack{background:linear-gradient(180deg,#C81C24,var(--vinho))}
+.paga-item.barra{background:linear-gradient(180deg,#22B455,#138A3C)}
+.paga-item span{display:block;font-weight:900;font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.88}
+.paga-item b{display:block;font-family:var(--display);font-weight:900;font-stretch:72%;font-size:clamp(28px,7.6vw,42px);line-height:1.05;margin-top:4px}
+.paga-op{font-family:var(--display);font-weight:900;font-size:40px;color:var(--marinho);line-height:1}
+.paga h3{font-family:var(--display);font-weight:900;font-stretch:68%;text-transform:uppercase;font-size:clamp(26px,6.6vw,38px);line-height:1;color:var(--marinho);margin-top:20px}
+.paga p{font-size:15px;color:var(--texto-2);margin:10px auto 0;max-width:34em}
+
+/* ============ O QUE VOCÊ RECEBE ============ */
+.cats{list-style:none;display:grid;gap:14px;margin-top:36px}
+.cats li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:18px 18px 18px 16px;align-items:start}
+.cats h3{font-family:var(--display);font-weight:900;font-stretch:68%;text-transform:uppercase;font-size:clamp(22px,5.6vw,26px);line-height:1;color:var(--marinho);margin:6px 0 6px}
+.cats p{font-size:15px;line-height:1.5;color:var(--texto-2)}
+.cada{margin:22px auto 0;max-width:900px;padding:20px 20px 18px;border:2px dashed rgba(20,33,90,.18);box-shadow:none}
+.cada-tit{font-family:var(--display);font-weight:900;font-stretch:70%;text-transform:uppercase;font-size:20px;color:var(--vermelho);text-align:center;margin:0 auto 14px}
+.cada ul{list-style:none;display:grid;gap:10px}
+.cada li{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;color:var(--marinho)}
+.cada .ck{width:24px;height:24px}.cada .ck svg{width:13px;height:13px}
+.formato{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;font-weight:800;font-size:14.5px;color:var(--texto-2)}
+.formato svg{width:22px;height:22px;color:var(--vermelho);flex:none}
+
+/* ============ BÔNUS ============ */
+.bonus-grade{display:grid;gap:22px;margin-top:36px;align-items:center}
+.bonus-capa{max-width:min(72vw,380px);margin:0 auto}
+.bonus-capa img{width:100%;height:auto;filter:drop-shadow(0 24px 28px rgba(0,0,0,.32))}
+.bonus-lista{list-style:none;display:grid;gap:12px}
+.bonus-lista li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:16px 18px 16px 16px;align-items:start}
+.bonus-lista h3{font-family:var(--display);font-weight:900;font-stretch:68%;text-transform:uppercase;font-size:22px;line-height:1;color:var(--marinho);margin:5px 0 5px}
+.bonus-lista p{font-size:15px;line-height:1.5;color:var(--texto-2)}
+.msg-modelo{position:relative;margin-top:14px;background:#fff;border:2px dashed #E59A9A;border-radius:18px;padding:22px 18px 16px}
+.msg-modelo .msg-tit{position:absolute;top:-13px;left:16px;background:var(--amarelo);color:var(--marinho);font-family:var(--display);font-weight:900;font-stretch:72%;font-size:15px;text-transform:uppercase;padding:5px 12px;border-radius:8px;box-shadow:0 3px 0 var(--amarelo-esc)}
+.msg-modelo p{font-size:15.5px;line-height:1.5;font-weight:700;color:var(--texto)}
 
 /* ============ EXPERT ============ */
-.por-expert{display:flex;align-items:center;gap:10px;margin:0 0 16px;font-size:15px;line-height:1.3;color:var(--giz-2)}
-.por-expert img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--giz);box-shadow:0 0 0 3px rgba(239,238,223,.18)}
-.por-expert b{color:var(--giz)}
-.polaroid{position:relative;margin:0;background:#FDFBF6;padding:8px 8px 34px;box-shadow:0 1px 0 rgba(0,0,0,.2),0 14px 22px rgba(0,0,0,.32)}
-.polaroid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.polaroid figcaption{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:var(--giz-fonte);font-size:23px;line-height:1;color:var(--tinta)}
-.polaroid::before{content:"";position:absolute;left:50%;top:-10px;width:78px;height:22px;margin-left:-39px;background:rgba(236,224,190,.9);box-shadow:0 1px 2px rgba(0,0,0,.2);transform:rotate(-3deg);z-index:2}
-.palco .polaroid-hero{width:54%;margin-left:3%;transform:rotate(-4deg);z-index:1}
-.palco .mockup-hero{position:relative;z-index:2;margin-top:-30%}
-.palco .mockup-hero:not(.com-foto){margin-top:-8%}
-.quem-fez{display:grid;gap:22px;margin-top:48px;padding:26px 20px;background:var(--papel);color:var(--tinta);box-shadow:0 1px 0 rgba(0,0,0,.2),0 12px 18px rgba(0,0,0,.26)}
-.quem-fez .polaroid{width:72%;max-width:260px;margin:4px auto 0;transform:rotate(2deg)}
-.quem-fez h3{font-size:15px;font-family:var(--texto);font-weight:700;color:var(--marca);margin-bottom:6px;font-stretch:normal}
-.quem-fez .nome{font:800 32px/1 var(--display);font-stretch:78%;margin:0 0 4px}
-.quem-fez .exp{font-weight:700;color:var(--tinta-2);margin-bottom:12px}
-.quem-fez .bio{font-size:16px;color:var(--tinta-2)}
-.quem-fez .bio p+p{margin-top:10px}
-.quem-fez .assina{font-family:var(--giz-fonte);font-size:32px;line-height:1;color:var(--jeans);margin-top:14px;transform:rotate(-2deg);display:inline-block}
-.assina-garantia{display:flex;align-items:center;gap:12px;margin-top:20px}
-.assina-garantia img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--giz)}
-.assina-garantia .giz{font-size:30px;transform:rotate(-2deg)}
-.assina-garantia small{display:block;font-size:13.5px;color:var(--giz-2);margin-top:2px}
-@media (min-width:760px){
-  .quem-fez{grid-template-columns:240px 1fr;align-items:center;gap:34px;padding:34px}
-  .quem-fez .polaroid{width:100%;margin:0}
-}
-@media (min-width:980px){
-  .palco .polaroid-hero{width:50%}
-}
+.expert{display:grid;overflow:hidden;margin-top:60px}
+.expert figure{background:linear-gradient(180deg,var(--amarelo-claro),var(--amarelo));display:flex;justify-content:center;align-items:flex-end;padding-top:24px;min-height:220px}
+.expert figure img{width:70%;max-width:300px;height:auto}
+.expert .bio-box{padding:22px 20px 26px}
+.expert .rot{font-weight:900;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--vermelho)}
+.expert .nome{font-family:var(--display);font-weight:900;font-stretch:66%;font-size:42px;line-height:1;text-transform:uppercase;color:var(--marinho);margin:6px 0 4px}
+.expert .exp{font-weight:800;color:var(--texto-2);margin-bottom:10px}
+.expert .bio{font-size:16px;color:var(--texto-2)}
+.expert .bio p+p{margin-top:10px}
 
+/* ============ DEPOIMENTOS ============ */
+.carrossel-depo{position:relative;margin:30px auto 0;max-width:540px}
+.carrossel-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 2px 18px}
+.carrossel-track::-webkit-scrollbar{display:none}
+.carrossel-slide{height:min(128vw,620px);display:flex;align-items:center;justify-content:center;flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always;border-radius:20px;overflow:hidden;background:#fff;border:6px solid #fff;box-shadow:var(--sombra)}
+.carrossel-slide picture{display:contents}
+.carrossel-slide img{width:100%;height:100%;object-fit:contain;border-radius:12px}
+.carrossel-btn{position:absolute;z-index:3;top:calc(50% - 10px);transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:var(--vinho);color:#fff;border:3px solid #fff;display:grid;place-items:center;box-shadow:0 6px 14px rgba(105,10,15,.4);cursor:pointer;padding:0}
+.carrossel-btn:hover{background:var(--vermelho)}
+.carrossel-btn.prev{left:-12px}
+.carrossel-btn.next{right:-12px}
+.carrossel-paginacao{display:flex;justify-content:center;gap:8px;margin-top:6px}
+.carrossel-dot{width:10px;height:10px;border-radius:50%;background:rgba(20,33,90,.22);cursor:pointer;transition:all .2s}
+.carrossel-dot.ativo{width:28px;border-radius:6px;background:var(--vinho)}
 
-/* expert recortada apresentando o pacote no hero */
-.palco{display:grid;grid-template-columns:1fr;align-items:end}
-.expert-hero{grid-area:1/1;width:66%;margin:0 0 0 -3%;position:relative;z-index:1;
-  -webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent);mask-image:linear-gradient(to bottom,#000 86%,transparent)}
-.expert-hero img{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.25))}
-.palco .mockup-hero.com-foto{grid-area:1/1;justify-self:end;align-self:end;width:66%;margin:0 -4% 6% 0;z-index:2}
-.palco .mockup-hero.com-foto img{max-width:none}
-.hero .palco{margin-left:-14px;margin-right:-12px}
-@media (min-width:980px){
-  html body .hero .grade{grid-template-columns:1fr 1.05fr;gap:28px}
-  html body .hero .palco{margin:0 -48px 0 0}
-  .expert-hero{width:62%}
-  .palco .mockup-hero.com-foto{width:70%}
-}
+/* ============ PREÇO ============ */
+#preco{padding-bottom:40px}
+.oferta{position:relative;max-width:540px;margin:44px auto 0;padding:0 0 26px;box-shadow:var(--sombra-forte)}
+.oferta-topo{background:linear-gradient(180deg,#C81C24,var(--vinho));color:#fff;text-align:left;border-radius:18px 18px 0 0;padding:22px 118px 20px 22px}
+.oferta-topo .t{font-family:var(--display);font-weight:900;font-stretch:66%;text-transform:uppercase;font-size:clamp(28px,7.4vw,38px);line-height:.95}
+.oferta-topo p{font-weight:800;font-size:14px;color:rgba(255,255,255,.88);margin:6px 0 0}
+.oferta .selo{right:-12px;top:-34px;width:116px;font-size:116px}
+.oferta .selo .s2{font-size:.25em;color:#fff;text-shadow:none;font-style:normal;line-height:1.05}
+.oferta-produto{display:block;width:84%;max-width:380px;height:auto;margin:16px auto 0;filter:drop-shadow(0 16px 20px rgba(20,33,90,.25))}
+.oferta-lista{list-style:none;display:grid;gap:10px;padding:14px 22px 4px;text-align:left}
+.oferta-lista li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start;font-size:15.5px;line-height:1.4}
+.oferta-lista .ck{width:24px;height:24px;margin-top:-1px}
+.oferta-lista .ck svg{width:13px;height:13px}
+.oferta-lista .bn{display:inline-block;font-weight:900;font-size:10.5px;letter-spacing:.08em;color:var(--vinho);background:var(--amarelo-claro);border-radius:5px;padding:1px 6px;margin-right:5px;vertical-align:1px}
+.valores{text-align:center;margin:18px 22px 0;padding-top:18px;border-top:2px dashed var(--linha)}
+.valores .de{font-weight:800;color:var(--texto-2);font-size:16px}
+.valores .de s{color:var(--vermelho)}
+.valores .por{font-weight:900;color:var(--marinho);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.valor{font-family:var(--display);font-weight:900;font-style:italic;font-stretch:78%;color:var(--verde);font-size:clamp(92px,25vw,124px);line-height:.95;letter-spacing:-.03em;margin:2px 0 4px}
+.valor small{font-size:.34em;vertical-align:top;position:relative;top:.32em;margin-right:6px;letter-spacing:0}
+.valor sup{font-size:.38em;vertical-align:top;position:relative;top:.24em;letter-spacing:0;margin-left:-.06em}
+.valores .unico{font-weight:800;font-size:14px;color:var(--texto-2)}
+.bump{display:grid;grid-template-columns:24px 1fr;gap:12px;text-align:left;margin:20px 22px 0;background:#FFFBEA;border:2px dashed var(--laranja);border-radius:14px;padding:14px}
+.bump .caixa{width:22px;height:22px;border:2.5px solid var(--marinho);border-radius:5px;margin-top:2px;background:#fff}
+.bump em{display:block;font-style:normal;font-size:11.5px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--laranja);margin-bottom:2px}
+.bump b{display:block;font-size:15.5px;line-height:1.25;margin-bottom:4px}
+.bump p{font-size:14px;line-height:1.45;color:var(--texto-2)}
+.oferta .btn-area{margin:26px 18px 0}
+.oferta .btn{font-size:clamp(25px,6.8vw,32px)}
+.pagamentos{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;font-size:12px;font-weight:800;color:var(--texto-2)}
+.pagamentos span{background:#F2F4FA;border-radius:8px;padding:5px 10px}
 
+/* ============ GARANTIA ============ */
+#garantia{padding-top:24px}
+.garantia-box{display:grid;gap:22px;align-items:center;padding:28px 22px;max-width:920px;margin:0 auto}
+.selo-garantia{width:min(62vw,220px);margin:0 auto;transform:rotate(-6deg);filter:drop-shadow(0 16px 20px rgba(105,10,15,.35))}
+.selo-garantia svg{width:100%;height:auto;overflow:visible}
+.garantia-box .tit{font-size:clamp(32px,7.6vw,48px);margin-bottom:12px}
+.assina{display:flex;align-items:center;gap:12px;margin-top:18px}
+.assina img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:3px solid var(--amarelo)}
+.assina b{display:block;color:var(--marinho)}
+.assina small{font-size:13px;color:var(--texto-2)}
 
-/* recortes da expert */
-.expert-recorte{margin:0;-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent);mask-image:linear-gradient(to bottom,#000 80%,transparent)}
-.expert-recorte img{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 16px rgba(0,0,0,.22))}
-.quem-fez .expert-recorte{width:78%;max-width:300px;margin:-60px auto 0}
-.intro-expert{display:grid;gap:4px}
-.expert-medindo{width:72%;max-width:320px;margin:10px auto -20px}
-.final-expert{display:grid;gap:8px}
-.expert-costurando{width:66%;max-width:300px;margin:-20px auto 0}
-@media (min-width:760px){
-  .quem-fez .expert-recorte{width:100%;margin:-70px 0 -34px}
-  .intro-expert{grid-template-columns:1.3fr .7fr;align-items:end;gap:30px}
-  .expert-medindo{width:100%;margin:0 0 -30px}
-  .final-expert{grid-template-columns:1.4fr .6fr;align-items:end;gap:36px}
-  .final-expert .expert-costurando{grid-column:2;grid-row:1;width:100%;margin:0 0 -88px}
-}
+/* ============ FAQ ============ */
+.faq{display:grid;gap:12px;margin:32px auto 0;max-width:780px}
+.faq details{background:#fff;border-radius:16px;box-shadow:var(--sombra);border:2px solid rgba(20,33,90,.05);overflow:hidden;transition:border-color .2s}
+.faq details[open]{border-color:var(--amarelo)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 32px;gap:14px;align-items:center;padding:18px 18px;font-weight:900;font-size:16.5px;line-height:1.3;color:var(--marinho)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .x{position:relative;width:32px;height:32px;border-radius:50%;background:var(--amarelo);transition:transform .25s,background .25s}
+.faq .x::before,.faq .x::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:3px;margin:-1.5px 0 0 -7px;background:var(--marinho);border-radius:2px}
+.faq .x::after{transform:rotate(90deg)}
+.faq details[open] .x{transform:rotate(45deg);background:var(--vermelho)}
+.faq details[open] .x::before,.faq details[open] .x::after{background:#fff}
+.faq details p{padding:0 18px 20px;font-size:16px;color:var(--texto-2)}
+
+/* ============ CTA FINAL ============ */
+.final{padding:76px 0 84px;overflow:hidden}
+.final-grade{display:grid;gap:18px;align-items:center}
+.final .tit{font-size:clamp(40px,10vw,70px)}
+.final .lead{margin-top:14px}
+.final figure img{width:100%;max-width:560px;height:auto;margin:0 auto;filter:drop-shadow(0 22px 26px rgba(0,0,0,.45))}
+.final .confianca{color:#fff}
+
+/* ============ RODAPÉ ============ */
+.rodape{background:var(--marinho-esc);color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;padding:40px 0 calc(40px + env(safe-area-inset-bottom))}
+.rodape .marca{font-family:var(--display);font-weight:900;font-stretch:66%;font-size:30px;text-transform:uppercase;color:#fff;margin-bottom:8px}
+.rodape .botoes{display:flex;flex-wrap:wrap;gap:4px 20px;margin:10px 0}
+.rodape button{background:none;border:0;padding:10px 0;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.rodape .aviso{margin-top:14px;font-size:12.5px;opacity:.8;max-width:46em}
+
+dialog{border:0;padding:0;max-width:620px;width:calc(100% - 28px);max-height:86vh;color:var(--texto);background:#fff;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.45);margin:auto}
+dialog::backdrop{background:rgba(12,21,64,.78)}
+.dlg{padding:26px 22px;overflow:auto;max-height:86vh;font-size:15.5px;line-height:1.6}
+.dlg h3{font-family:var(--display);font-weight:900;font-stretch:66%;text-transform:uppercase;font-size:32px;color:var(--marinho);margin-bottom:10px}
+.dlg h4{font-weight:900;font-size:17px;margin:16px 0 4px;color:var(--marinho)}
+.fechar{position:sticky;top:0;float:right;width:42px;height:42px;border:0;border-radius:50%;background:var(--amarelo);color:var(--marinho);font-size:24px;font-weight:900;cursor:pointer;margin:-8px -8px 0 0;z-index:2}
+#dlgZoom{max-width:760px}
+#dlgZoom .dlg{padding:12px}
+#dlgZoom img{width:100%;height:auto;border-radius:10px}
+
 
 /* ============ telas maiores ============ */
-@media (min-width:620px){
-  .papel{padding:40px 36px}
-  .itens{grid-template-columns:1fr 1fr;gap:34px 30px}
-  .item.bonus{grid-column:1/-1;max-width:560px}
-  .depos{grid-template-columns:1fr 1fr}
+@media (min-width:640px){
+  .wrap{padding:0 32px}
+  section{padding:92px 0}
+  .pilula{flex-direction:row;text-align:left;font-size:15px;padding:13px 14px;gap:10px}
+  .grade-consertos{grid-template-columns:repeat(3,1fr);gap:20px}
+  .conserto h3{font-size:23px}
+  .preco-chip small{display:inline}
+  .cats{grid-template-columns:1fr 1fr;gap:18px}
+  .cada ul{grid-template-columns:1fr 1fr;gap:12px 24px}
+  .leque{justify-content:center;overflow:visible;margin:40px 0 0;padding:16px 0 20px}
+  .pagina{flex:0 1 32%}
+  .pagina:nth-child(1){transform:rotate(-4deg) translateY(16px)}
+  .pagina:nth-child(3){transform:rotate(4deg) translateY(16px)}
+  .pagina:nth-child(2){z-index:2;transform:scale(1.05)}
+  .pagina:hover{transform:rotate(0) translateY(-6px) scale(1.06);z-index:3}
+  .mac .card{padding:20px 14px}
+  .mac small{font-size:13.5px}
+  .paga{padding:30px 32px}
+  .expert{grid-template-columns:300px 1fr;align-items:stretch}
+  .expert figure{padding-top:30px}
+  .expert figure img{width:90%}
+  .expert .bio-box{padding:34px 36px 34px 12px;align-self:center}
+  .garantia-box{grid-template-columns:220px 1fr;gap:40px;padding:36px 40px}
+  .carrossel-btn.prev{left:-62px}
+  .carrossel-btn.next{right:-62px}
 }
-@media (min-width:760px){
-  :root{--fio-x:max(14px, calc(50% - var(--max) / 2 - 22px))}
-  .wrap{padding:0 40px}
-  section{padding:88px 0}
-  .garantia .grade{grid-template-columns:320px 1fr;gap:56px}
-  .selo-garantia{margin:0;width:300px}
+@media (min-width:768px){
 }
 @media (min-width:980px){
-  :root{--cm:46px}
-  .hero{padding:56px 0 96px}
-  .hero .grade{display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center}
-  .hero .palco{grid-column:2;grid-row:1 / span 2;margin:0}
-  .envelope{width:400px}
-  .env-arte{height:240px}
-  .env-arte svg{height:212px}
-  .tag-area{max-width:460px}
-  .final .wrap{text-align:left}
+  .hero{padding:26px 0 104px}
+  .topo-logo{margin-bottom:6px}
+  .hero-grade{grid-template-columns:1fr 1fr;grid-template-areas:"texto visual" "acoes visual";column-gap:40px;align-items:start}
+  .hero-texto,.hero-acoes{text-align:left}
+  .hero-texto{align-self:end}
+  .hero h1{justify-content:flex-start}
+  .hero-visual{max-width:none;margin:0 -24px 0 0;align-self:center}
+  .hero-visual .selo{width:170px;font-size:170px;right:0;bottom:6%}
+  .hero-acoes .lead{margin:20px 0 22px}
+  .hero-acoes .btn-area{align-items:flex-start;margin-top:26px}
+  .hero-acoes .confianca{justify-content:flex-start}
+  .pilulas{max-width:540px}
+  .bonus-grade{grid-template-columns:.85fr 1.15fr;gap:48px}
+  .final-grade{grid-template-columns:1fr 1fr;gap:48px}
+  .final-grade .btn-area{align-items:flex-start}
+  .final-grade .confianca{justify-content:flex-start}
+  .final-texto{text-align:left}
 }
-@media (max-width:360px){
+@media (max-width:400px){
   body{font-size:16px}
-  .wrap{padding:0 12px 0 28px}
-  :root{--fio-x:9px}
-  .papel{padding:26px 16px}
-  .valor{font-size:84px}
-  .item{grid-template-columns:88px 1fr;gap:14px}
-  .mini{width:88px;height:118px}
-  .mini .ma svg{height:50px}
+  .wrap{padding:0 16px}
+  .leque{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
+  .sub.raios{font-size:16px}
+  .raios::before,.raios::after{width:16px;height:14px}
+  .btn{gap:10px;padding:12px 18px}
+  .paga-op{font-size:30px}
+  .oferta-topo{padding-right:104px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .cta,.faq .x{transition:none}
+  .btn::after,.ticker-trilho{animation:none}
+  .btn,.pagina,.faq .x,.conserto .ft img{transition:none}
 }
 </style>
 <!-- Meta Pixel Code -->
@@ -539,445 +451,388 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
 /></noscript>
 
-
-<!-- ======== desenhos e ícones ======== -->
+<!-- ======== ícones ======== -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="d-calca" viewBox="0 0 120 170"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M28 8h64l4 16-6 140H66L60 62l-6 102H30L24 24z"/><path d="M24 24h72"/><path d="M60 24v28"/>
-    <path d="M30 24c2 12 10 18 20 18M90 24c-2 12-10 18-20 18"/><path d="M40 8v16M80 8v16" stroke-width="1.6"/></g></symbol>
-  <symbol id="d-maquina" viewBox="0 0 120 90"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M10 80h100"/><path d="M18 80V30c0-9 7-16 16-16h58c7 0 12 5 12 12v18H50v36"/><path d="M84 44v14m-5 0h10"/><circle cx="96" cy="26" r="4"/><path d="M30 24v8"/></g></symbol>
-  <symbol id="d-fita" viewBox="0 0 120 90"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-    <circle cx="42" cy="45" r="28"/><circle cx="42" cy="45" r="8"/><path d="M42 73h66v-14H62"/><path d="M74 73v-6M84 73v-9M94 73v-6M104 73v-9"/></g></symbol>
-  <symbol id="d-camisa" viewBox="0 0 120 100"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M40 10l-26 14 10 22 10-6v54h52V40l10 6 10-22-26-14c-2 8-10 12-20 12S42 18 40 10z"/><circle cx="84" cy="66" r="14"/><path d="M94 76l14 14"/></g></symbol>
-  <symbol id="d-sacola" viewBox="0 0 120 100"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M24 36h72l-6 58H30z"/><path d="M42 36c0-22 36-22 36 0"/><path d="M30 50h60" stroke-dasharray="5 5"/><path d="M50 66l8 8 14-16"/></g></symbol>
-  <symbol id="i-maquina" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 20h18M5 20V9a3 3 0 0 1 3-3h9.5a2 2 0 0 1 2 2v4h-9v8"/><path d="M15 12v3.5M13.5 15.5h3"/></g></symbol>
-  <symbol id="i-barra" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M7 2h10l1 20h-5l-1-11-1 11H6z"/><path d="M6.3 18h11.4" stroke-dasharray="1.6 1.6"/></g></symbol>
-  <symbol id="i-ziper" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2v20"/><path d="M9.5 5H12M12 7.5h2.5M9.5 10H12M12 12.5h2.5"/><rect x="9.5" y="15" width="5" height="5" rx="1.2"/></g></symbol>
-  <symbol id="i-alfinete" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="16.5" cy="7.5" r="3"/><path d="M14.4 9.6L4 20"/></g></symbol>
-  <symbol id="i-lupa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></g></symbol>
-  <symbol id="i-cabide" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9.5V8a2 2 0 1 0-2-2"/><path d="M12 9.5L3 16.5c-.8.6-.4 2 .7 2h16.6c1.1 0 1.5-1.4.7-2z"/></g></symbol>
-  <symbol id="i-regua" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><rect x="2.5" y="8" width="19" height="8" rx="1"/><path d="M6 8v3M9.5 8v4.5M13 8v3M16.5 8v4.5"/></g></symbol>
-  <symbol id="i-agulha" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 20L18.5 5.5"/><ellipse cx="18.8" cy="5.2" rx="1.6" ry="1" transform="rotate(-45 18.8 5.2)"/><path d="M18 6c-3 1-4.5 4-2.5 6s-1 5-5 5.5"/></g></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" d="M4.5 13c2 1.6 3.4 3.3 4.6 5.2C11.6 12.6 15 8.4 19.8 5"/></symbol>
-  <symbol id="i-escudo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3.5l7 2.8v5.2c0 4.3-2.9 7.6-7 9-4.1-1.4-7-4.7-7-9V6.3z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.4"/></g></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></g></symbol>
-  <symbol id="i-cadeado" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
-  <symbol id="i-raio" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol>
-  <symbol id="i-pdf" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M12 5h17l9 9v29H12z"/><path d="M29 5v9h9"/></g><text x="25" y="35" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="800" fill="currentColor">PDF</text></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-baixar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M6.5 9.8L12 15.3l5.5-5.5"/><path d="M3.5 15.5v3.5a1.5 1.5 0 0 0 1.5 1.5h14a1.5 1.5 0 0 0 1.5-1.5v-3.5"/></g></symbol>
+  <symbol id="i-cadeado" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></g></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3.5l7 2.8v5.2c0 4.3-2.9 7.6-7 9-4.1-1.4-7-4.7-7-9V6.3z"/><path d="M8.8 12.2l2.2 2.2 4.3-4.4"/></g></symbol>
+  <symbol id="i-raio" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" d="M13 3L5 13.5h6L10 21l8-10.5h-6z"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5M10.5 8v5M8 10.5h5"/></g></symbol>
+  <symbol id="i-celular" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></g></symbol>
 </svg>
 
-<div class="borda" id="borda" aria-hidden="true"></div>
-
-<!-- linha de costura (assinatura) -->
-<div id="fio" aria-hidden="true">
-  <svg id="agulha" viewBox="0 0 11 70"><path d="M5.5 2c2 0 3 1.5 3 3.5V48L5.5 69 2.5 48V5.5C2.5 3.5 3.5 2 5.5 2z" fill="#D5D9DD" stroke="#7D868F" stroke-width="1"/><ellipse cx="5.5" cy="9" rx="1.2" ry="3.4" fill="#2F5E4E"/><path d="M5.5 9C5.5 4 3 0 1.5 -4" stroke="#C8392F" stroke-width="2" fill="none"/></svg>
-</div>
+<div class="aviso-topo">Oferta de lançamento · acesso imediato por <b>R$ 19,90</b></div>
 
 <main>
 
-<header class="topo-logo">
-  <img src="assets/apostila/logo-ajuste-certo.webp" width="900" height="272" alt="Ajuste Certo · Guia ilustrado de consertos em roupas prontas">
-</header>
-
 <!-- ============ 1. HERO ============ -->
-<section class="hero" id="topo">
-  <div class="wrap grade">
-    <div>
-      <h1>Abra seu próprio negócio de consertos em casa por apenas R$ 19,90 e fature de R$ 4.300 a R$ 6.700 por mês.</h1>
-      <p class="lead">Tudo o que você precisa para transformar o amor pela costura em um negócio respeitado e altamente lucrativo na sua máquina doméstica. Por um investimento simbólico de apenas <b>R$ 19,90</b> (menos do que você cobra em uma única barra de calça), especialize-se nos <b>18 consertos mais pedidos do mercado</b> e use nossos <b>materiais prontos de divulgação</b> para atrair clientes fiéis sem precisar bater de porta em porta.</p>
-    </div>
-
-    <div class="palco">
-      <figure class="expert-hero"><img src="assets/fotos/expert-apresentando.webp" width="820" height="1007" alt="" data-expert-alt fetchpriority="high"></figure>
-      <figure class="foto mockup-hero" data-slot="mockup-hero-celular.webp (1:1) e mockup-hero-desktop.webp (4:3), fundo transparente">
-        <picture>
-          <source media="(max-width: 979px)" srcset="assets/fotos/mockup-hero-celular.webp">
-          <img src="assets/fotos/mockup-hero-desktop.webp" width="1200" height="967" alt="Os quatro guias e o pacote de bônus do Ajuste Certo no notebook, no tablet e no celular" decoding="async" fetchpriority="high">
-        </picture>
-        <span class="slot">mockup-hero-celular.webp (1:1)<br>mockup-hero-desktop.webp (4:3)</span>
-        <div class="reserva">
-      <div class="envelope" role="img" aria-label="Envelope do Ajuste Certo com quatro guias e o kit completo do negócio">
-        <svg class="alfinete" viewBox="0 0 26 70" aria-hidden="true"><circle cx="13" cy="10" r="9" fill="#3D6FB6"/><circle cx="10" cy="7" r="2.5" fill="#9DBDEB"/><path d="M13 19v50" stroke="#B7BEC5" stroke-width="2"/></svg>
-        <div class="env">
-          <div class="env-topo"><span class="env-marca">Ajuste Certo</span><span class="env-ed">ed. 2026</span></div>
-          <p class="env-sub">Tudo para abrir seu negócio de consertos lucrativos na máquina doméstica</p>
-          <div class="env-arte">
-            <svg viewBox="0 0 120 170" style="color:var(--tinta)"><use href="#d-calca"/>
-              <path d="M26 146h32M64 146h32" stroke="#C8392F" stroke-width="2.4" stroke-dasharray="4 3"/>
-              <path d="M104 132v28M100 136l4-4 4 4M100 156l4 4 4-4" stroke="#C8392F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span class="anot" style="right:10px;top:132px">−3 cm</span>
-            <span class="anot" style="left:10px;top:12px;font-size:20px">fio reto ↕</span>
-          </div>
-          <table class="env-tab" aria-hidden="true">
-            <tr><th>1</th><th>2</th><th>3</th><th>4</th><th>+</th></tr>
-            <tr><td>Partida</td><td>M.A.C.</td><td>18 Lucrativos</td><td>Diagnóstico</td><td>Kit Negócio</td></tr>
-          </table>
-        </div>
-        <div class="carimbo" id="carimbo"><span>Novo<br>edição<br>2026</span></div>
+<section class="hero fundo-sol" id="topo">
+  <div class="wrap">
+    <header class="topo-logo">
+      <img src="assets/apostila/logo-ajuste-certo.webp" width="900" height="272" alt="Ajuste Certo · Guia ilustrado de consertos em roupas prontas">
+    </header>
+    <div class="hero-grade">
+      <div class="hero-texto">
+        <span class="kicker"><i></i>Pack digital ilustrado</span>
+        <h1><span class="n18">101</span><span class="resto">Consertos<br>ilustrados</span></h1>
+        <span class="faixa">Para começar sua renda extra com costura</span>
+        <p class="sub raios">Passo a passo na máquina de casa</p>
       </div>
-        </div>
-      </figure>
-      <span class="nota-giz giz"><svg viewBox="0 0 44 36" aria-hidden="true"><path d="M40 32C30 30 16 22 8 6m0 0l-2 10m2-10l9 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>fature de R$ 4.300 a R$ 6.700/mês!</span>
-    </div>
 
-    <div>
-      <a class="cta js-scroll-preco" href="#preco">Quero Abrir Meu Negócio de Consertos</a>
-      <ul class="selos">
-        <li><span class="sel"><svg><use href="#i-cadeado"/></svg></span><span><b>Compra</b>segura</span></li>
-        <li><span class="sel"><svg><use href="#i-escudo"/></svg></span><span><b>Garantia</b>de 7 dias</span></li>
-        <li><span class="sel"><svg><use href="#i-raio"/></svg></span><span><b>Acesso</b>imediato</span></li>
-      </ul>
+      <div class="hero-visual">
+        <img src="assets/fotos/mockup-hero-celular.webp" srcset="assets/fotos/mockup-hero-celular.webp 800w, assets/fotos/mockup-hero-1200.webp 1200w" sizes="(min-width: 980px) 560px, 92vw" width="800" height="800" alt="Pack Ajuste Certo: caderno com os consertos ilustrados, páginas de troca de zíper, manga e barra e tablet com ajuste de cintura" fetchpriority="high">
+        <div class="selo" aria-label="Apenas R$ 19,90"><span class="s1">Apenas</span><span class="s2"><small>R$</small>19<sup>,90</sup></span></div>
+      </div>
+
+      <div class="hero-acoes">
+        <p class="lead">Barra, cós, zíper, laterais, mangas e alças desenhados <b>etapa por etapa</b> para você aprender e já oferecer seus serviços.</p>
+        <div class="pilulas">
+          <div class="pilula"><span class="ck"><svg><use href="#i-check"/></svg></span>101 consertos em PDF</div>
+          <div class="pilula"><span class="ck"><svg><use href="#i-check"/></svg></span>Passo a passo ilustrado</div>
+          <div class="pilula"><span class="ck"><svg><use href="#i-check"/></svg></span>Artes para divulgar</div>
+        </div>
+        <div class="btn-area">
+          <a class="btn js-scroll-preco" href="#preco"><svg><use href="#i-baixar"/></svg><span>Acesso <em>imediato</em></span></a>
+          <p class="ancora">De <s>R$&nbsp;97</s> por <b>R$&nbsp;19,90</b> · pagamento único</p>
+          <div class="confianca">
+            <span><svg><use href="#i-cadeado"/></svg>Compra segura</span>
+            <span><svg><use href="#i-escudo"/></svg>Garantia de 7 dias</span>
+            <span><svg><use href="#i-raio"/></svg>Receba na hora</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 2. O QUE VOCÊ RECEBE ============ -->
-<section id="entregaveis" style="padding-top:24px">
-  <div class="wrap">
-    <h2>Tudo o que você precisa para faturar com consertos</h2>
-    <p class="lead">O método completo de especialização nos 18 consertos mais lucrativos da costura por uma taxa única de apenas <b>R$ 19,90</b>, acompanhado do pacote essencial de ferramentas para atrair e atender clientes.</p>
+<!-- ticker -->
+<div class="ticker-faixa" aria-hidden="true"><div class="ticker">
+  <div class="ticker-trilho">
+    <ul><li>Barra de calça</li><li>Ajuste de cós</li><li>Troca de zíper</li><li>Apertar lateral</li><li>Encurtar manga</li><li>Ajuste de alça</li><li>Barra invisível</li><li>Cós com elástico</li></ul>
+    <ul><li>Barra de calça</li><li>Ajuste de cós</li><li>Troca de zíper</li><li>Apertar lateral</li><li>Encurtar manga</li><li>Ajuste de alça</li><li>Barra invisível</li><li>Cós com elástico</li></ul>
+  </div>
+</div></div>
 
-    <div class="mac-resumo">
-      <div class="mac-badgeline">
-        <span class="mac-badge"><b>M</b> Medir</span>
-        <span class="mac-badge"><b>A</b> Alfinetar</span>
-        <span class="mac-badge"><b>C</b> Costurar</span>
-      </div>
-      <p><b>A Sequência M.A.C.:</b> a cliente aprova o caimento no espelho antes do primeiro ponto na máquina. Você costura com segurança total, sem medo de errar a peça.</p>
+<!-- ============ 2. PRÉVIA ============ -->
+<section class="fundo-creme" id="previa">
+  <div class="wrap centro">
+    <div class="faixas">
+      <span class="faixa">Barra simples é uma coisa.</span>
+      <span class="faixa">Cós, zíper e ajustes são outra história.</span>
+    </div>
+    <p class="lead" style="margin-top:24px;max-width:36em">É aí que está o dinheiro dos consertos. Por isso cada ajuste do pack vem desenhado etapa por etapa, com os erros comuns e o que conferir antes de entregar a peça.</p>
+
+    <div class="leque">
+      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-barra-jeans-g.webp"><span class="rot">Barra de jeans</span><img src="assets/apostila/conserto-barra-jeans.webp" width="600" height="850" alt="Página do guia: barra de calça jeans passo a passo" loading="lazy" decoding="async"><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
+      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-cos-g.webp"><span class="rot">Ajuste de cós</span><img src="assets/apostila/conserto-cos.webp" width="600" height="850" alt="Página do guia: ajuste de cós passo a passo" loading="lazy" decoding="async"><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
+      <button type="button" class="pagina" data-zoom="assets/apostila/conserto-ziper-g.webp"><span class="rot">Troca de zíper</span><img src="assets/apostila/conserto-ziper.webp" width="600" height="850" alt="Página do guia: troca de zíper passo a passo" loading="lazy" decoding="async"><span class="lupa"><svg><use href="#i-lupa"/></svg></span></button>
+    </div>
+    <p class="dica-leque">Toque numa página para ver de perto</p>
+
+    <div class="mac">
+      <div class="card"><b>M</b><strong>Medir</strong><small>marque na cliente</small></div>
+      <div class="card"><b>A</b><strong>Alfinetar</strong><small>prove antes do ponto</small></div>
+      <div class="card"><b>C</b><strong>Costurar</strong><small>sem medo de errar</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. CONSERTOS + PREÇOS ============ -->
+<section class="fundo-amarelo" id="consertos">
+  <div class="wrap">
+    <div class="cab">
+      <span class="kicker"><i></i>Não precisa de máquina industrial</span>
+      <h2 class="tit">Aprenda o conserto.<br><span class="v">E saiba quanto cobrar!</span></h2>
+      <p class="lead">Os consertos mais pedidos em qualquer bairro, feitos na máquina que você já tem, com a faixa de preço que costureiras cobram por cada um.</p>
     </div>
 
-    <ul class="itens">
-      <li class="item">
-        <figure class="foto capa-item"><img src="assets/fotos/mockup-guia-1.webp" width="800" height="1000" alt="Capa do Guia 1, Partida" decoding="async"><div class="reserva"><div class="mini" aria-hidden="true"><div class="mt"><span>Ajuste Certo</span><b>1</b></div><div class="ma"><svg viewBox="0 0 120 90"><use href="#d-maquina"/></svg></div><div class="mn">Partida</div></div></div><span class="slot">mockup-guia-1.webp (4:5)</span></figure>
-        <div><h3>Guia 1. Partida: O Ateliê em Casa na Máquina Doméstica</h3><p>As ferramentas essenciais que você já tem ou compra por centavos, a organização do seu espaço de trabalho e como regular qualquer máquina caseira (antiga ou moderna) para acabamento profissional em jeans, malha e tecidos finos sem quebrar agulha.</p></div>
-      </li>
-      <li class="item">
-        <figure class="foto capa-item"><img src="assets/fotos/mockup-guia-2.webp" width="800" height="1000" alt="Capa do Guia 2, Sequência M.A.C." decoding="async"><div class="reserva"><div class="mini" aria-hidden="true"><div class="mt"><span>Ajuste Certo</span><b>2</b></div><div class="ma"><svg viewBox="0 0 120 90"><use href="#d-fita"/></svg></div><div class="mn">Sequência M.A.C.</div></div></div><span class="slot">mockup-guia-2.webp (4:5)</span></figure>
-        <div><h3>Guia 2. Sequência M.A.C. &amp; Fichas de Atendimento</h3><p>A postura profissional diante da cliente, o roteiro passo a passo para medir sem errar e as fichas de atendimento prontas para imprimir para registrar cada pedido, prazos e medidas com extrema organização.</p></div>
-      </li>
-      <li class="item">
-        <figure class="foto capa-item"><img src="assets/fotos/mockup-guia-3.webp" width="800" height="1000" alt="Capa do Guia 3, 18 Consertos" decoding="async"><div class="reserva"><div class="mini" aria-hidden="true"><div class="mt"><span>Ajuste Certo</span><b>3</b></div><div class="ma"><svg viewBox="0 0 120 170"><use href="#d-calca"/></svg></div><div class="mn">18 consertos</div></div></div><span class="slot">mockup-guia-3.webp (4:5)</span></figure>
-        <div><h3>Guia 3. Especialização nos 18 Consertos Mais Lucrativos</h3><p>O manual visual das 18 peças que geram 90% da receita de um ateliê: barra original de jeans, barra invisível, ajuste de cós simples e com elástico, troca de zíper comum e invisível, laterais de camisas e vestidos, mangas e alças. Passo a passo ilustrado com nível de dificuldade.</p></div>
-      </li>
-      <li class="item">
-        <figure class="foto capa-item"><img src="assets/fotos/mockup-guia-4.webp" width="800" height="1000" alt="Capa do Guia 4, Diagnóstico" decoding="async"><div class="reserva"><div class="mini" aria-hidden="true"><div class="mt"><span>Ajuste Certo</span><b>4</b></div><div class="ma"><svg viewBox="0 0 120 100"><use href="#d-camisa"/></svg></div><div class="mn">Diagnóstico</div></div></div><span class="slot">mockup-guia-4.webp (4:5)</span></figure>
-        <div><h3>Guia 4. Diagnóstico, Precificação &amp; Segurança</h3><p>Como avaliar a peça na hora e passar o preço com firmeza, calcular o tempo gasto, o que aceitar e o que recusar, além de técnicas profissionais para desmanchar qualquer costura sem deixar marcas nem furar o tecido.</p></div>
-      </li>
-      <li class="item bonus">
-        <figure class="foto capa-item"><img src="assets/fotos/mockup-bonus.webp" width="800" height="1000" alt="Capa do Pacote de Aceleração do Negócio" decoding="async"><div class="reserva"><div class="mini" aria-hidden="true"><div class="mt"><span>Ajuste Certo</span><b>+</b></div><div class="ma"><svg viewBox="0 0 120 100"><use href="#d-sacola"/></svg></div><div class="mn">Kit Negócio</div></div></div><div class="carimbo"><span>kit com<br>3 bônus!</span></div><span class="slot">mockup-bonus.webp (4:5)</span></figure>
-        <div>
-          <h3>Super Bônus: O Kit de Aceleração do Negócio em Casa</h3>
-          <p>Tudo pronto para você divulgar com elegância e atrair clientes sem precisar bater de porta em porta:</p>
-          <ul style="list-style:none;display:grid;gap:8px;margin-top:10px;font-size:15px;color:var(--giz-2)">
-            <li><b>1. Pack de Artes Prontas para Instagram &amp; Redes Sociais:</b> modelos elegantes para feed e stories, tabelas visuais de serviços e comunicados que passam credibilidade imediata de ateliê profissional.</li>
-            <li><b>2. Scripts Prontos de Atendimento no WhatsApp:</b> mensagens prontas para responder orçamentos com firmeza, confirmar prazos, avisar que a peça está pronta e pedir indicações com simpatia.</li>
-            <li><b>3. Guia de Divulgação Silenciosa + Cartaz para Imprimir:</b> mensagens elegantes para grupos de condomínio, cartaz em alta resolução para mural/elevador e roteiro para parcerias com lojas de roupas do bairro.</li>
-          </ul>
-        </div>
-      </li>
+    <ul class="grade-consertos">
+      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-barra-jeans.webp" width="800" height="800" alt="Barra de calça jeans" loading="lazy" decoding="async"><span class="num c1">1</span></div><div class="info"><h3>Barra de calça jeans</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 35</span></div></li>
+      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-cos.webp" width="800" height="800" alt="Ajuste de cós" loading="lazy" decoding="async"><span class="num c2">2</span></div><div class="info"><h3>Ajuste de cós</h3><span class="preco-chip"><small>cobra-se</small>R$ 30 a 45</span></div></li>
+      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-ziper.webp" width="800" height="800" alt="Troca de zíper" loading="lazy" decoding="async"><span class="num c3">3</span></div><div class="info"><h3>Troca de zíper</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 40</span></div></li>
+      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-lateral.webp" width="800" height="800" alt="Apertar lateral de camisa" loading="lazy" decoding="async"><span class="num c4">4</span></div><div class="info"><h3>Apertar lateral</h3><span class="preco-chip"><small>cobra-se</small>R$ 30 a 50</span></div></li>
+      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-manga.webp" width="800" height="800" alt="Encurtar manga" loading="lazy" decoding="async"><span class="num c5">5</span></div><div class="info"><h3>Encurtar manga</h3><span class="preco-chip"><small>cobra-se</small>R$ 25 a 40</span></div></li>
+      <li class="card conserto"><div class="ft"><img src="assets/fotos/conserto-alca.webp" width="800" height="800" alt="Ajuste de alça" loading="lazy" decoding="async"><span class="num c1">6</span></div><div class="info"><h3>Ajuste de alça</h3><span class="preco-chip"><small>cobra-se</small>R$ 20 a 35</span></div></li>
+    </ul>
+    <div class="mais12">+ 95 consertos <em>no pack</em></div>
+
+    <div class="card paga">
+      <div class="paga-linha">
+        <div class="paga-item pack"><span>O pack todo</span><b>R$ 19,90</b></div>
+        <div class="paga-op" aria-hidden="true">&lt;</div>
+        <div class="paga-item barra"><span>1 barra de jeans</span><b>R$ 25+</b></div>
+      </div>
+      <h3>O primeiro conserto já paga o pack</h3>
+      <p>Com 4 a 6 ajustes por dia no seu ritmo (cerca de 2 a 3 horas de trabalho), dá para faturar de <b>R$ 170 a R$ 260 por dia</b> atendendo em casa.</p>
+    </div>
+
+    <div class="btn-area">
+      <a class="btn js-scroll-preco" href="#preco"><svg><use href="#i-baixar"/></svg><span>Quero meu <em>pack</em></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. O QUE TEM NOS 101 CONSERTOS ============ -->
+<section class="fundo-creme" id="entregaveis">
+  <div class="wrap">
+    <div class="cab">
+      <span class="kicker"><i></i>O que vem no pack</span>
+      <h2 class="tit"><span class="v">101 consertos</span> ilustrados passo a passo</h2>
+      <p class="lead">Os ajustes que mais chegam para uma costureira, organizados por tipo de peça, para abrir no celular ao lado da máquina.</p>
+    </div>
+
+    <ul class="cats">
+      <li class="card"><span class="num c1">1</span><div><h3>Calças e jeans</h3><p>Barra original e barra invisível, ajuste de cós simples e com elástico, cintura e comprimento.</p></div></li>
+      <li class="card"><span class="num c2">2</span><div><h3>Zíperes</h3><p>Troca de zíper comum e invisível em calças, saias e vestidos.</p></div></li>
+      <li class="card"><span class="num c3">3</span><div><h3>Camisas, blusas e vestidos</h3><p>Apertar laterais, encurtar mangas e ajustar alças.</p></div></li>
+      <li class="card"><span class="num c4">4</span><div><h3>Reparos do dia a dia</h3><p>Rasgos, botões, forros e os pequenos consertos que chegam toda semana.</p></div></li>
     </ul>
 
-    <h3 class="galeria-tit">Os 18 consertos mais procurados (e quanto você fatura com eles)</h3>
-    <p class="galeria-sub">Ao se especializar nestas 18 peças, você atende a maior demanda do mercado com segurança e velocidade:</p>
-    <ul class="galeria">
-      <li class="tile">
-        <figure class="foto"><img src="assets/fotos/conserto-barra-jeans.webp" width="900" height="900" alt="Barra de calça jeans: conserto pronto" decoding="async"><div class="reserva"><svg viewBox="0 0 24 24"><use href="#i-barra"/></svg></div><span class="slot">conserto-barra-jeans.webp (1:1)</span></figure>
-        <span class="selo-guia" aria-hidden="true">Guia<b>3</b></span>
-        <span class="nome-tile">Barra de calça jeans<br><small style="color:var(--marca);font-weight:700">Média: R$ 25 a R$ 35</small></span>
-      </li>
-      <li class="tile">
-        <figure class="foto"><img src="assets/fotos/conserto-cos.webp" width="900" height="900" alt="Ajuste de cós: conserto pronto" decoding="async"><div class="reserva"><svg viewBox="0 0 24 24"><use href="#i-regua"/></svg></div><span class="slot">conserto-cos.webp (1:1)</span></figure>
-        <span class="selo-guia" aria-hidden="true">Guia<b>3</b></span>
-        <span class="nome-tile">Ajuste de cós<br><small style="color:var(--marca);font-weight:700">Média: R$ 30 a R$ 45</small></span>
-      </li>
-      <li class="tile">
-        <figure class="foto"><img src="assets/fotos/conserto-ziper.webp" width="900" height="900" alt="Troca de zíper: conserto pronto" decoding="async"><div class="reserva"><svg viewBox="0 0 24 24"><use href="#i-ziper"/></svg></div><span class="slot">conserto-ziper.webp (1:1)</span></figure>
-        <span class="selo-guia" aria-hidden="true">Guia<b>3</b></span>
-        <span class="nome-tile">Troca de zíper<br><small style="color:var(--marca);font-weight:700">Média: R$ 25 a R$ 40</small></span>
-      </li>
-      <li class="tile">
-        <figure class="foto"><img src="assets/fotos/conserto-lateral.webp" width="900" height="900" alt="Lateral de camisa: conserto pronto" decoding="async"><div class="reserva"><svg viewBox="0 0 120 100"><use href="#d-camisa"/></svg></div><span class="slot">conserto-lateral.webp (1:1)</span></figure>
-        <span class="selo-guia" aria-hidden="true">Guia<b>3</b></span>
-        <span class="nome-tile">Lateral de camisa<br><small style="color:var(--marca);font-weight:700">Média: R$ 30 a R$ 50</small></span>
-      </li>
-      <li class="tile">
-        <figure class="foto"><img src="assets/fotos/conserto-manga.webp" width="900" height="900" alt="Encurtar manga: conserto pronto" decoding="async"><div class="reserva"><svg viewBox="0 0 24 24"><use href="#i-agulha"/></svg></div><span class="slot">conserto-manga.webp (1:1)</span></figure>
-        <span class="selo-guia" aria-hidden="true">Guia<b>3</b></span>
-        <span class="nome-tile">Encurtar manga<br><small style="color:var(--marca);font-weight:700">Média: R$ 25 a R$ 40</small></span>
-      </li>
-      <li class="tile">
-        <figure class="foto"><img src="assets/fotos/conserto-alca.webp" width="900" height="900" alt="Ajuste de alça: conserto pronto" decoding="async"><div class="reserva"><svg viewBox="0 0 24 24"><use href="#i-cabide"/></svg></div><span class="slot">conserto-alca.webp (1:1)</span></figure>
-        <span class="selo-guia" aria-hidden="true">Guia<b>3</b></span>
-        <span class="nome-tile">Ajuste de alça<br><small style="color:var(--marca);font-weight:700">Média: R$ 20 a R$ 35</small></span>
-      </li>
-    </ul>
-    <p class="galeria-mais"><b>Especialização completa nos 18 consertos:</b> Fazendo de 4 a 6 ajustes por dia no seu ritmo (cerca de 2 a 3 horas de trabalho), você fatura de <b>R$ 170 a R$ 260 por dia</b> — alcançando de <b>R$ 4.300 a R$ 6.700 por mês</b> no conforto da sua casa! Um negócio completo com investimento inicial de apenas <b>R$ 19,90</b>.</p>
-    <div class="quem-fez">
-      <figure class="expert-recorte"><img src="assets/fotos/expert-maquina.webp" width="760" height="890" alt="" data-expert-alt decoding="async"></figure>
+    <div class="card cada">
+      <p class="cada-tit">Em cada um dos 101 consertos</p>
+      <ul>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Passo a passo Medir, Alfinetar e Costurar</li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Desenhos de cada etapa</li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Nível de dificuldade</li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span>Verificações finais e erro comum</li>
+      </ul>
+    </div>
+    <p class="formato"><svg><use href="#i-celular"/></svg>Abre no celular, no computador ou na impressora</p>
+  </div>
+</section>
+
+<!-- ============ 5. BÔNUS: DIVULGAÇÃO ============ -->
+<section class="fundo-amarelo" id="bonus">
+  <div class="wrap">
+    <div class="centro">
+      <div class="faixas">
+        <span class="faixa">Saber costurar é o começo.</span>
+        <span class="faixa">Mostre seus consertos e consiga clientes!</span>
+      </div>
+      <p class="sub raios" style="margin-top:22px">Bônus: kit de divulgação pronto</p>
+    </div>
+
+    <div class="bonus-grade">
+      <div class="bonus-capa">
+        <img src="assets/fotos/mockup-bonus.webp" width="700" height="875" alt="Kit de divulgação: post para Instagram, cartaz para imprimir e modelo de mensagem" loading="lazy" decoding="async">
+      </div>
       <div>
-        <h3>Quem preparou o guia</h3>
+        <ul class="bonus-lista">
+          <li class="card"><span class="num c1">1</span><div><h3>Artes prontas para Instagram</h3><p>Modelos de feed e stories, tabela visual de serviços e comunicados com cara de ateliê profissional.</p></div></li>
+          <li class="card"><span class="num c2">2</span><div><h3>Scripts de WhatsApp</h3><p>Mensagens para responder orçamentos, confirmar prazos, avisar que a peça está pronta e pedir indicações.</p></div></li>
+          <li class="card"><span class="num c3">3</span><div><h3>Divulgação no bairro + cartaz</h3><p>Textos para grupos de condomínio, cartaz em alta resolução para mural e roteiro de parceria com lojas de roupa.</p></div></li>
+        </ul>
+        <div class="msg-modelo">
+          <span class="msg-tit">Exemplo de mensagem</span>
+          <p>“Olá! Eu faço consertos e ajustes de roupas, como barras, troca de zíper, ajuste de cintura e mangas. Entre em contato e peça seu orçamento!”</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card expert">
+      <figure><img src="assets/fotos/expert-maquina.webp" width="760" height="890" alt="" data-expert-alt loading="lazy" decoding="async"></figure>
+      <div class="bio-box">
+        <span class="rot">Quem preparou o pack</span>
         <p class="nome" data-expert="nome">Karina Eduarda</p>
         <p class="exp" data-expert="experiencia">costureira há [X] anos</p>
         <div class="bio" data-expert="bio"></div>
-        <span class="assina" data-expert="assinatura">Karina Eduarda</span>
       </div>
-    </div>
-    <div class="formato"><svg><use href="#i-pdf"/></svg><span>Tudo em PDF: abre no celular, no computador ou na impressora, do jeito que for mais fácil de deixar ao lado da máquina.</span></div>
-    <div style="text-align:center;margin-top:28px">
-      <a class="cta js-scroll-preco" href="#preco">Garantir Meu Acesso Completo</a>
     </div>
   </div>
 </section>
 
-<!-- ============ 3. PRÉVIA DO GUIA ============ -->
-<section id="previa" style="padding-top:24px">
+<!-- ============ 6. DEPOIMENTOS ============ -->
+<section class="fundo-creme" id="depoimentos">
   <div class="wrap">
-    <div id="blocoPrevia">
-      <h2>Veja a clareza de cada conserto por dentro</h2>
-      <p class="lead">É assim que cada ajuste aparece no Guia 3: etapa por etapa, com desenho e dicas práticas para você entregar um trabalho impecável.</p>
-      <div class="folha instrucoes">
-        <article class="papel" aria-label="Exemplo de página do Guia 3">
-          <div class="inst-topo"><span>Guia 3, conserto 01</span><span>Ajuste Certo</span></div>
-          <h3>Barra simples em calça de tecido plano</h3>
-          <div class="fichas"><span>Nível iniciante</span><span>Ponto reto</span><span>Etapa C da M.A.C.</span></div>
-          <ol class="etapas">
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-1.webp" width="800" height="600" alt="Desenho: vinco da barra sendo passado a ferro sobre a marcação" decoding="async"><span class="reserva"><svg><use href="#i-regua"/></svg></span><span class="slot">pagina-passo-1.webp (4:3)</span></span><span>Confira a marcação feita na etapa do alfinete e passe o vinco a ferro.</span></li>
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-2.webp" width="800" height="600" alt="Desenho: excesso de tecido cortado com tesoura e a primeira dobra feita" decoding="async"><span class="reserva"><svg><use href="#i-alfinete"/></svg></span><span class="slot">pagina-passo-2.webp (4:3)</span></span><span>Corte o excesso deixando a margem indicada na ficha e faça a primeira dobra.</span></li>
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-3.webp" width="800" height="600" alt="Desenho: barra sendo costurada rente à dobra na máquina" decoding="async"><span class="reserva"><svg><use href="#i-agulha"/></svg></span><span class="slot">pagina-passo-3.webp (4:3)</span></span><span>Costure rente à dobra, começando pela costura interna da perna.</span></li>
-            <li><span class="des foto"><img src="assets/fotos/pagina-passo-4.webp" width="800" height="600" alt="Desenho: as duas pernas da calça lado a lado para comparar o comprimento" decoding="async"><span class="reserva"><svg><use href="#i-barra"/></svg></span><span class="slot">pagina-passo-4.webp (4:3)</span></span><span>Prove de novo e compare as duas pernas lado a lado antes do acabamento.</span></li>
-          </ol>
-          <p class="dica"><b>Dica de Ateliê:</b> comece sempre pela perna menos à vista. Se precisar refazer o início, o detalhe fica onde ninguém repara e a cliente sai encantada.</p>
-        </article>
-      </div>
-      <p class="legenda">Página de demonstração. O guia completo traz 18 consertos lucrativos neste mesmo formato.</p>
+    <div class="cab">
+      <span class="kicker"><i></i>Quem já aplica</span>
+      <h2 class="tit">Resultados de <span class="v">quem já começou</span></h2>
+      <p class="lead">Arraste para o lado para ver as mensagens de alunas que atendem em casa.</p>
     </div>
-  </div>
-</section>
-
-<!-- ============ 4. DEPOIMENTOS ============ -->
-<section class="secao-depoimentos" id="depoimentos">
-  <div class="wrap">
-    <h2>Resultados reais de quem já aplica o método</h2>
-    <p class="lead">Arraste para o lado ou use as setas para ver os relatos e comprovantes de alunas que faturam em casa:</p>
 
     <div class="carrossel-depo">
-      <button class="carrossel-btn prev" type="button" aria-label="Depoimento anterior">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-
+      <button class="carrossel-btn prev" type="button" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
       <div class="carrossel-track" id="depoTrack">
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-1.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-1.png" width="1216" height="1293" alt="Depoimento de aluna com mensagens no WhatsApp e clientes agendando consertos" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-2.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-2.png" width="1208" height="1302" alt="Resumo financeiro e faturamento de aluna com consertos de roupas" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-3.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-3.png" width="1024" height="1536" alt="Depoimento de aluna sobre atendimento e clientes no WhatsApp" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-4.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-4.png" width="1149" height="1369" alt="Caderno com anotações de pedidos de conserto e agradecimento no WhatsApp" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-5.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-5.png" width="1024" height="1536" alt="Conversa com cliente confirmando entrega e pagamento de ajuste" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-6.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-6.png" width="878" height="1790" alt="Recibo financeiro e comprovante de pagamento no WhatsApp" loading="lazy" decoding="async">
-          </picture>
-        </div>
-        <div class="carrossel-slide">
-          <picture>
-            <source srcset="assets/fotos/depoimento-7.webp" type="image/webp">
-            <img src="assets/fotos/depoimento-7.png" width="1086" height="1448" alt="Mensagens de cliente sobre ajuste em três camisas" loading="lazy" decoding="async">
-          </picture>
-        </div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-1.webp" type="image/webp"><img src="assets/fotos/depoimento-1.png" width="1216" height="1293" alt="Depoimento de aluna com mensagens no WhatsApp e clientes agendando consertos" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-2.webp" type="image/webp"><img src="assets/fotos/depoimento-2.png" width="1208" height="1302" alt="Resumo financeiro e faturamento de aluna com consertos de roupas" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-3.webp" type="image/webp"><img src="assets/fotos/depoimento-3.png" width="1024" height="1536" alt="Depoimento de aluna sobre atendimento e clientes no WhatsApp" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-4.webp" type="image/webp"><img src="assets/fotos/depoimento-4.png" width="1149" height="1369" alt="Caderno com anotações de pedidos de conserto e agradecimento no WhatsApp" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-5.webp" type="image/webp"><img src="assets/fotos/depoimento-5.png" width="1024" height="1536" alt="Conversa com cliente confirmando entrega e pagamento de ajuste" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-6.webp" type="image/webp"><img src="assets/fotos/depoimento-6.png" width="878" height="1790" alt="Recibo financeiro e comprovante de pagamento no WhatsApp" loading="lazy" decoding="async"></picture></div>
+        <div class="carrossel-slide"><picture><source srcset="assets/fotos/depoimento-7.webp" type="image/webp"><img src="assets/fotos/depoimento-7.png" width="1086" height="1448" alt="Mensagens de cliente sobre ajuste em três camisas" loading="lazy" decoding="async"></picture></div>
       </div>
-
-      <button class="carrossel-btn next" type="button" aria-label="Próximo depoimento">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
+      <button class="carrossel-btn next" type="button" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
     </div>
-
     <div class="carrossel-paginacao" id="depoPaginacao" aria-hidden="true"></div>
   </div>
 </section>
 
-<!-- ============ 5. PREÇO ============ -->
-<section class="preco" id="preco">
+<!-- ============ 7. PREÇO ============ -->
+<section class="fundo-sol" id="preco">
   <div class="wrap">
-    <h2>Abra seu próprio negócio de consertos hoje mesmo</h2>
-    <p class="lead">Tudo o que você precisa para se especializar nos 18 consertos mais lucrativos e ter clientes procurando você pelo valor de uma única barra de calça.</p>
+    <div class="cab">
+      <h2 class="tit">Pack de <span class="v">101 consertos</span> ilustrados</h2>
+      <p class="sub">Aprenda para oferecer seus serviços</p>
+    </div>
 
-    <div class="tag-area">
-      <svg class="barbante" viewBox="0 0 120 110" aria-hidden="true"><path d="M60 100C58 70 30 60 22 30S40 -2 44 -10M60 100C64 72 92 62 96 34S84 0 80 -10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-      <div class="tag">
-        <div class="tag-corpo">
-          <p class="marca">Ajuste Certo</p>
-          <ul>
-            <li><svg><use href="#i-check"/></svg><span><b>Guia 1</b>, Partida: O Ateliê em Casa na Máquina Doméstica</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>Guia 2</b>, Sequência M.A.C. com Fichas de Atendimento</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>Guia 3</b>, Especialização nos 18 Consertos Mais Lucrativos</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>Guia 4</b>, Diagnóstico, Precificação &amp; Segurança</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>BÔNUS 1:</b> Pack de Artes Prontas para Instagram &amp; Redes</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>BÔNUS 2:</b> Scripts de Atendimento e Vendas no WhatsApp</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>BÔNUS 3:</b> Guia de Divulgação Silenciosa + Cartaz para Imprimir</span></li>
-            <li><svg><use href="#i-check"/></svg><span><b>Garantia</b> incondicional de 7 dias</span></li>
-          </ul>
-          <div class="valores">
-            <p class="ref">Valor normal de mercado: <s>R$&nbsp;97,00</s></p>
-            <p class="valor"><small>R$</small>19<sup>,90</sup></p>
-            <p class="unico">à vista, pagamento único · 1 único conserto já paga todo o investimento</p>
-          </div>
-          <div class="bump">
-            <span class="caixa" aria-hidden="true"></span>
-            <div>
-              <em>Opcional, na hora do pagamento</em>
-              <b>Tabela Completa de Precificação de Consertos por mais R$&nbsp;7,90</b>
-              <p>Mais de 80 consertos com tempo médio gasto, nível de dificuldade e faixa de preço recomendada para você nunca mais ter dúvida de quanto cobrar. Marque a caixinha no checkout para adicionar.</p>
-            </div>
-          </div>
-          <a class="cta js-checkout" href="#preco">Quero Abrir Meu Negócio de Consertos</a>
-          <ul class="selos">
-        <li><span class="sel"><svg><use href="#i-cadeado"/></svg></span><span><b>Compra</b>segura</span></li>
-        <li><span class="sel"><svg><use href="#i-escudo"/></svg></span><span><b>Garantia</b>de 7 dias</span></li>
-        <li><span class="sel"><svg><use href="#i-raio"/></svg></span><span><b>Acesso</b>imediato</span></li>
+    <div class="card oferta">
+      <div class="selo" aria-hidden="true"><span class="s1">Economize</span><span class="s2">R$ 77</span></div>
+      <div class="oferta-topo">
+        <p class="t">Ajuste Certo completo</p>
+        <p>Pagamento único · acesso para sempre</p>
+      </div>
+      <img class="oferta-produto" src="assets/fotos/mockup-hero-celular.webp" width="800" height="800" alt="" loading="lazy" decoding="async">
+      <ul class="oferta-lista">
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span><b>101 consertos ilustrados</b> passo a passo em PDF</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span>Calças, zíperes, camisas, vestidos e reparos do dia a dia</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span>Método <b>Medir, Alfinetar e Costurar</b> em cada conserto</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span><span class="bn">BÔNUS</span>Artes prontas para Instagram</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span><span class="bn">BÔNUS</span>Scripts de atendimento no WhatsApp</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span><span class="bn">BÔNUS</span>Divulgação no bairro + cartaz para imprimir</span></li>
+        <li><span class="ck"><svg><use href="#i-check"/></svg></span><span><b>Garantia</b> incondicional de 7 dias</span></li>
       </ul>
+      <div class="valores">
+        <p class="de">De <s>R$&nbsp;97,00</s></p>
+        <p class="por">por apenas</p>
+        <p class="valor"><small>R$</small>19<sup>,90</sup></p>
+        <p class="unico">à vista no Pix ou cartão · 1 conserto já paga o pack</p>
+      </div>
+      <div class="bump">
+        <span class="caixa" aria-hidden="true"></span>
+        <div>
+          <em>Opcional, no checkout</em>
+          <b>Tabela completa de preços por + R$&nbsp;7,90</b>
+          <p>Mais de 80 consertos com tempo médio, nível de dificuldade e faixa de preço recomendada. Marque a caixinha no checkout para adicionar.</p>
+        </div>
+      </div>
+      <div class="btn-area">
+        <a class="btn js-checkout" href="#preco"><svg><use href="#i-baixar"/></svg><span>Acesso <em>imediato</em></span></a>
+        <div class="confianca">
+          <span><svg><use href="#i-cadeado"/></svg>Compra segura</span>
+          <span><svg><use href="#i-escudo"/></svg>7 dias de garantia</span>
+          <span><svg><use href="#i-raio"/></svg>Chega no e-mail</span>
+        </div>
+        <div class="pagamentos"><span>Pix</span><span>Cartão de crédito</span><span>PDF no celular</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. GARANTIA ============ -->
+<section id="garantia" class="fundo-sol">
+  <div class="wrap">
+    <div class="card garantia-box">
+      <div class="selo-garantia" role="img" aria-label="Selo: garantia incondicional de 7 dias">
+        <svg viewBox="0 0 300 300" aria-hidden="true">
+          <defs>
+            <path id="arcoTopo" d="M46,150 A104,104 0 0 1 254,150"/>
+            <path id="arcoBase" d="M34,150 A116,116 0 0 0 266,150"/>
+          </defs>
+          <circle cx="150" cy="150" r="147" fill="#FFD22E"/>
+          <circle cx="150" cy="150" r="136" fill="#B3141B"/>
+          <circle cx="150" cy="150" r="129" fill="none" stroke="#FFD22E" stroke-width="2.6" stroke-dasharray="7 5" stroke-linecap="round"/>
+          <circle cx="150" cy="150" r="90" fill="#14215A"/>
+          <circle cx="150" cy="150" r="84" fill="none" stroke="#fff" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text fill="#fff" style="font-family:Archivo,'Arial Narrow',sans-serif;font-weight:900;font-stretch:70%;font-size:22px;letter-spacing:2.4px"><textPath href="#arcoTopo" startOffset="50%" text-anchor="middle">GARANTIA INCONDICIONAL</textPath></text>
+          <text fill="#fff" style="font-family:Archivo,'Arial Narrow',sans-serif;font-weight:900;font-stretch:70%;font-size:20px;letter-spacing:2.4px"><textPath href="#arcoBase" startOffset="50%" text-anchor="middle">REEMBOLSO INTEGRAL</textPath></text>
+          <text x="150" y="184" text-anchor="middle" fill="#FFD22E" style="font-family:Archivo,'Arial Narrow',sans-serif;font-weight:900;font-style:italic;font-stretch:80%;font-size:112px">7</text>
+          <text x="150" y="212" text-anchor="middle" fill="#fff" style="font-family:Archivo,'Arial Narrow',sans-serif;font-weight:900;font-stretch:70%;font-size:22px;letter-spacing:5px">DIAS</text>
+        </svg>
+      </div>
+      <div>
+        <h2 class="tit">Risco zero: <span class="v">7 dias de garantia</span></h2>
+        <p class="lead">Baixe o pack, teste na sua máquina e confira cada página. Se achar que não é para você, mande um e-mail em até 7 dias e devolvemos 100% do valor. Sem perguntas e sem burocracia.</p>
+        <p class="assina"><img src="assets/fotos/expert-avatar.webp" width="300" height="300" alt="" data-expert-alt loading="lazy"><span><b data-expert="assinatura">Karina Eduarda</b><small>autora do Ajuste Certo</small></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. FAQ ============ -->
+<section class="fundo-creme" id="duvidas">
+  <div class="wrap">
+    <div class="cab">
+      <span class="kicker"><i></i>Dúvidas</span>
+      <h2 class="tit">Perguntas <span class="v">frequentes</span></h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Preciso de máquina industrial ou overloque?<span class="x" aria-hidden="true"></span></summary>
+        <p>Não. Uma máquina doméstica comum (antiga ou moderna) com ponto reto e zigue-zague faz a grande maioria dos consertos do pack: barras, laterais, cós e zíperes.</p>
+      </details>
+      <details>
+        <summary>Nunca consertei nada para fora. Consigo começar?<span class="x" aria-hidden="true"></span></summary>
+        <p>Consegue. No conserto a roupa já vem pronta: o trabalho é ajustar o caimento. Cada conserto tem nível de dificuldade, então você começa pelos fáceis e avança no seu ritmo.</p>
+      </details>
+      <details>
+        <summary>Como e quando recebo o material?<span class="x" aria-hidden="true"></span></summary>
+        <p>Assim que o pagamento é confirmado, o link de download chega no seu e-mail com os 101 consertos e o kit de bônus. No Pix e no cartão, costuma chegar em menos de 2 minutos.</p>
+      </details>
+      <details>
+        <summary>O pagamento é único? Tem mensalidade?<span class="x" aria-hidden="true"></span></summary>
+        <p>Pagamento único de R$ 19,90. Sem mensalidade e sem cobranças futuras.</p>
+      </details>
+      <details>
+        <summary>E se eu achar que não é para mim?<span class="x" aria-hidden="true"></span></summary>
+        <p>Você tem 7 dias de garantia incondicional. É só pedir o reembolso pelo e-mail de suporte no rodapé e devolvemos 100% do valor.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. CTA FINAL ============ -->
+<section class="final fundo-marinho" id="final">
+  <div class="wrap final-grade">
+    <div class="final-texto centro">
+      <span class="kicker esc"><i></i>Comece hoje</span>
+      <h2 class="tit" style="margin-top:16px">Comece com a <span class="am">máquina que você tem</span></h2>
+      <p class="lead">101 consertos ilustrados e artes para divulgar, por menos do que custa <b>uma barra de calça</b>.</p>
+      <div class="btn-area">
+        <a class="btn js-scroll-preco" href="#preco"><svg><use href="#i-baixar"/></svg><span>Quero meu <em>pack</em></span></a>
+        <div class="confianca">
+          <span><svg><use href="#i-cadeado"/></svg>Compra segura</span>
+          <span><svg><use href="#i-escudo"/></svg>Garantia de 7 dias</span>
+          <span><svg><use href="#i-raio"/></svg>Acesso imediato</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ 6. GARANTIA ============ -->
-<section class="garantia" id="garantia" style="padding-top:24px">
-  <div class="wrap grade">
-    <div class="selo-garantia" role="img" aria-label="Selo: garantia incondicional de 7 dias, reembolso integral">
-      <svg viewBox="0 0 300 300" aria-hidden="true">
-        <defs>
-          <pattern id="cetim" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="6" height="6" fill="#C8392F"/><rect width="2" height="6" fill="#D2463B"/></pattern>
-          <path id="arcoTopo" d="M46,150 A104,104 0 0 1 254,150"/>
-          <path id="arcoBase" d="M34,150 A116,116 0 0 0 266,150"/>
-        </defs>
-        <circle cx="150" cy="150" r="147" fill="#EDE3C8"/>
-        <circle cx="150" cy="150" r="147" fill="none" stroke="#C9B88F" stroke-width="3" stroke-dasharray="2 4"/>
-        <circle cx="150" cy="150" r="136" fill="url(#cetim)"/>
-        <circle cx="150" cy="150" r="129" fill="none" stroke="#F6EFDC" stroke-width="2.6" stroke-dasharray="7 5" stroke-linecap="round"/>
-        <circle cx="150" cy="150" r="90" fill="#B5342A"/>
-        <circle cx="150" cy="150" r="90" fill="none" stroke="#F6EFDC" stroke-width="2"/>
-        <circle cx="150" cy="150" r="84" fill="none" stroke="#F6EFDC" stroke-width="1.4" stroke-dasharray="4 4"/>
-        <text fill="#F6EFDC" style="font-family:var(--display);font-stretch:80%;font-weight:800;font-size:19px;letter-spacing:2.2px"><textPath href="#arcoTopo" startOffset="50%" text-anchor="middle">GARANTIA INCONDICIONAL</textPath></text>
-        <text fill="#F6EFDC" style="font-family:var(--display);font-stretch:80%;font-weight:800;font-size:17px;letter-spacing:2.2px"><textPath href="#arcoBase" startOffset="50%" text-anchor="middle">REEMBOLSO INTEGRAL</textPath></text>
-        <circle cx="36" cy="150" r="5" fill="#3D6FB6"/><circle cx="34.5" cy="148.5" r="1.6" fill="#9DBDEB"/>
-        <circle cx="264" cy="150" r="5" fill="#3D6FB6"/><circle cx="262.5" cy="148.5" r="1.6" fill="#9DBDEB"/>
-        <text x="150" y="177" text-anchor="middle" fill="#F6EFDC" style="font-family:var(--display);font-stretch:75%;font-weight:800;font-size:118px;letter-spacing:-2px">7</text>
-        <text x="150" y="205" text-anchor="middle" fill="#F6EFDC" style="font-family:var(--display);font-stretch:80%;font-weight:800;font-size:22px;letter-spacing:5px">DIAS</text>
-      </svg>
-    </div>
-    <div>
-      <h2>Risco zero: garantia incondicional de 7 dias</h2>
-      <p class="lead">Baixe os guias, teste na sua máquina e confira cada detalhe. Se por qualquer motivo achar que o método não é para você, basta nos enviar um e-mail em até 7 dias e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia e sem ressentimentos.</p>
-      <p class="assina-garantia"><img src="assets/fotos/expert-avatar.webp" width="300" height="300" alt="" data-expert-alt><span><span class="giz" data-expert="assinatura">Karina Eduarda</span><small>autora do Ajuste Certo</small></span></p>
-      <div style="margin-top:24px">
-        <a class="cta js-scroll-preco" href="#preco">Quero Testar por 7 Dias Sem Risco</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 7. FAQ ============ -->
-<section id="duvidas" style="padding-top:24px">
-  <div class="wrap">
-    <div class="folha" style="max-width:780px">
-      <div class="papel">
-        <h2>Perguntas frequentes sobre o negócio</h2>
-        <div class="faq">
-          <details>
-            <summary>Qual máquina eu preciso ter? Preciso de overloque ou máquina industrial?<span class="x" aria-hidden="true"></span></summary>
-            <p>Não precisa de máquina industrial nem de overloque para começar! Uma máquina de costura doméstica comum (antiga ou moderna) com ponto reto e zigue-zague faz mais de 90% dos consertos mais lucrativos (barras de calça jeans, laterais, cós e zíperes). O Guia 1 ensina todos os atalhos para entregar acabamento de fábrica na sua máquina caseira.</p>
-          </details>
-          <details>
-            <summary>Nunca consertei nada para fora. Consigo abrir meu negócio do zero?<span class="x" aria-hidden="true"></span></summary>
-            <p>Com certeza. O grande erro de quem começa na costura é tentar fazer vestidos do zero, modelagem complexa e lidar com peças sob medida. No conserto, a roupa já vem pronta: seu único trabalho é ajustar o caimento. A Sequência M.A.C. ensina o passo a passo com nível iniciante para você começar pelas peças fáceis e ir faturando com segurança desde a primeira semana.</p>
-          </details>
-          <details>
-            <summary>Como e quando recebo o material e os bônus?<span class="x" aria-hidden="true"></span></summary>
-            <p>Assim que o pagamento for confirmado, você recebe imediatamente o link de download no seu e-mail cadastrado, incluindo todos os 4 guias e o Kit Completo de Aceleração do Negócio. Com Pix e cartão de crédito, o acesso costuma chegar em menos de 2 minutos.</p>
-          </details>
-          <details>
-            <summary>O pagamento é único? Tem mensalidade ou taxas extras?<span class="x" aria-hidden="true"></span></summary>
-            <p>Pagamento único de apenas R$ 19,90. Sem mensalidade, sem cobranças futuras e sem pegadinhas. Uma única barra de calça que você fizer para uma cliente já paga todo o valor do material e ainda sobra lucro no seu bolso.</p>
-          </details>
-          <details>
-            <summary>E se eu achar que não é para mim?<span class="x" aria-hidden="true"></span></summary>
-            <p>Você tem 7 dias de garantia incondicional. Se não gostar do material ou achar que não serve para você, basta pedir o reembolso pelo e-mail de suporte no rodapé e devolveremos 100% do seu investimento, sem questionamentos.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 8. CTA FINAL ============ -->
-<section class="final" id="final">
-  <div class="wrap final-expert">
-    <figure class="expert-recorte expert-costurando"><img src="assets/fotos/expert-costurando.webp" width="760" height="1058" alt="" data-expert-alt decoding="async"></figure>
-    <div>
-      <h2>Seu próprio negócio de consertos começa esta semana</h2>
-      <p class="lead">Com a máquina que você já tem em casa e um investimento de apenas <b>R$ 19,90</b> (menos que o valor de uma única barra de calça), você recebe o método M.A.C., os 18 consertos mais lucrativos e todas as ferramentas de divulgação para começar a faturar.</p>
-      <a class="cta js-scroll-preco" href="#preco">Quero Abrir Meu Negócio de Consertos</a>
-      <ul class="selos">
-        <li><span class="sel"><svg><use href="#i-cadeado"/></svg></span><span><b>Compra</b>segura</span></li>
-        <li><span class="sel"><svg><use href="#i-escudo"/></svg></span><span><b>Garantia</b>de 7 dias</span></li>
-        <li><span class="sel"><svg><use href="#i-raio"/></svg></span><span><b>Acesso</b>imediato</span></li>
-      </ul>
-    </div>
+    <figure><img src="assets/fotos/mockup-hero-desktop.webp" width="1200" height="900" alt="" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
 </main>
 
-<!-- ============ 9. RODAPÉ ============ -->
+<!-- ============ RODAPÉ ============ -->
 <footer class="rodape" id="rodape">
   <div class="wrap">
-    <p class="marca" style="font-size:30px">Ajuste Certo</p>
-    <p><span id="fRazao">Ajuste Certo LTDA</span>, CNPJ <span id="fCnpj" style="font-family:var(--display)">61.504.364/0001-01</span></p>
+    <p class="marca">Ajuste Certo</p>
+    <p><span id="fRazao">Ajuste Certo LTDA</span>, CNPJ <span id="fCnpj">61.504.364/0001-01</span></p>
     <p>Suporte: <span id="fEmail">contato@ajustecerto.com.br</span></p>
     <div class="botoes">
       <button type="button" data-abre="dlgTermos">Termos de uso</button>
       <button type="button" data-abre="dlgPriv">Política de privacidade</button>
     </div>
     <p>© <span id="fAno">2026</span> Ajuste Certo. Todos os direitos reservados.</p>
-    <p class="aviso">Material educativo em formato digital. O resultado de cada conserto depende da prática, do tecido e do equipamento de cada pessoa. Este site não faz parte do Facebook, do Instagram ou da Meta Platforms, Inc., nem é endossado por eles.</p>
+    <p class="aviso">Material educativo em formato digital. O resultado de cada conserto depende da prática, do tecido e do equipamento de cada pessoa. Valores de serviço são referências de mercado, não garantia de ganhos. Este site não faz parte do Facebook, do Instagram ou da Meta Platforms, Inc., nem é endossado por eles.</p>
   </div>
 </footer>
 
-<!-- Termos e privacidade abrem aqui mesmo, sem sair da página. Modelos básicos: revisar antes de publicar. -->
+
+<dialog id="dlgZoom" aria-label="Página do guia ampliada">
+  <div class="dlg">
+    <button class="fechar" type="button" aria-label="Fechar">×</button>
+    <img id="zoomImg" src="" alt="Página do guia ampliada">
+  </div>
+</dialog>
+
+<!-- Termos e privacidade abrem aqui mesmo. Modelos básicos: revisar antes de publicar. -->
 <dialog id="dlgTermos" aria-labelledby="tTermos">
   <div class="dlg">
     <button class="fechar" type="button" aria-label="Fechar">×</button>
     <h3 id="tTermos">Termos de uso</h3>
     <h4>1. O produto</h4>
-    <p>O Ajuste Certo é um material educativo digital composto por quatro guias em PDF e um bônus enviado no 7º dia após a compra. O acesso é pessoal e enviado ao e-mail informado no pagamento.</p>
+    <p>O Ajuste Certo é um material educativo digital composto por um pack com 101 consertos ilustrados em PDF e um kit de bônus. O acesso é pessoal e enviado ao e-mail informado no pagamento.</p>
     <h4>2. Uso permitido</h4>
     <p>O conteúdo é para uso individual. Não é permitido revender, redistribuir, publicar ou compartilhar os arquivos, no todo ou em parte, sem autorização por escrito.</p>
     <h4>3. Garantia e reembolso</h4>
@@ -995,7 +850,7 @@ src="https://www.facebook.com/tr?id=2455920631826658&ev=PageView&noscript=1"
     <h4>Quais dados coletamos</h4>
     <p>Nome, e-mail, telefone e dados de pagamento informados no checkout, processados pela plataforma de pagamento. Esta página pode usar cookies e pixels de mensuração de anúncios.</p>
     <h4>Para que usamos</h4>
-    <p>Para entregar o material comprado, enviar o bônus, prestar suporte, processar reembolsos e medir o desempenho dos nossos anúncios.</p>
+    <p>Para entregar o material comprado, prestar suporte, processar reembolsos e medir o desempenho dos nossos anúncios.</p>
     <h4>Compartilhamento</h4>
     <p>Não vendemos seus dados. Eles são compartilhados apenas com os serviços necessários à operação: a plataforma de pagamento, o envio de e-mails e a mensuração de anúncios.</p>
     <h4>Seus direitos (LGPD)</h4>
@@ -1009,42 +864,32 @@ const CONFIG = {
   checkout: "https://herocheckout.com.br/c/QP3W6BG2/THX5Q6SF",
   razaoSocial: "Ajuste Certo LTDA",
   cnpj: "61.504.364/0001-01",
-  email: "contato@ajustecerto.com.br", // exibido como texto, sem link
-  compradoras: 0                      // número REAL. 0 = carimbo "Novo, edição 2026"
+  email: "contato@ajustecerto.com.br" // exibido como texto, sem link
 };
-/* EXPERT: só dados REAIS e aprovados por ela. Aparece no hero, no "Quem preparou o guia",
-   na garantia e no CTA final. Enquanto os campos tiverem [colchetes], a página NÃO está pronta. */
+/* EXPERT: só dados REAIS e aprovados por ela. Campos com [colchetes] ficam escondidos. */
 const EXPERT = {
   nome: "Karina Eduarda",
   assinatura: "Karina Eduarda",
   experiencia: "costureira há [X] anos",    // ex.: "costureira há 22 anos"
-  bio: "Especializou-se em consertos rápidos de alta lucratividade e no desenvolvimento de métodos profissionais para mulheres que desejam abrir seu próprio ateliê de costura em casa.\n\nCriadora da Sequência M.A.C. (Medir, Alfinetar e Costurar), ensina como estruturar um negócio de consertos e faturar de R$ 4.300 a R$ 6.700 por mês na máquina doméstica, especializando-se nos 18 consertos mais pedidos do mercado com segurança e acabamento impecável.",
-  formacao: ""   // formação REAL e verificável (ex.: curso, escola, ano). Vazio = não aparece.
+  bio: "Especializou-se em consertos rápidos e no desenvolvimento de métodos práticos para mulheres que desejam atender em casa.\n\nCriadora da Sequência M.A.C. (Medir, Alfinetar e Costurar), ensina como fazer os consertos mais pedidos do mercado na máquina doméstica, com segurança e acabamento caprichado.",
+  formacao: ""   // formação REAL e verificável. Vazio = não aparece.
 };
-
-/* Só depoimentos REAIS, com autorização por escrito. Sem foto, sem sobrenome.
-   Prefira os que falam de facilidade e aprendizado, nunca de dinheiro.
-   { texto: "...", nome: "Primeiro nome", local: "Cidade/UF", conserto: "Barra de jeans" } */
-const DEPOIMENTOS = [];
 /* ========================================================================== */
 
 (function(){
   const $ = s => document.querySelector(s);
 
+  // checkout e rolagem até o preço
   if (CONFIG.checkout) document.querySelectorAll('.js-checkout').forEach(a => a.href = CONFIG.checkout);
+  document.querySelectorAll('.js-scroll-preco').forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('preco').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+  document.querySelectorAll('.js-checkout').forEach(a => a.addEventListener('click', () => {
+    if (window.fbq) fbq('track', 'InitiateCheckout', { value: 19.90, currency: 'BRL' });
+  }));
 
-  document.querySelectorAll('a[href="#preco"]').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      if (this.classList.contains('js-checkout') && CONFIG.checkout) return;
-      e.preventDefault();
-      const card = document.getElementById('preco') || document.querySelector('.tag');
-      if (card) {
-        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-  if (CONFIG.compradoras > 0) $('#carimbo').innerHTML = '<span>' + CONFIG.compradoras.toLocaleString('pt-BR') + '<br>compradoras</span>';
-
+  // rodapé
   $('#fRazao').textContent = CONFIG.razaoSocial;
   $('#fCnpj').textContent = CONFIG.cnpj;
   $('#fEmail').textContent = CONFIG.email;
@@ -1060,105 +905,39 @@ const DEPOIMENTOS = [];
     else el.textContent = v;
   });
   document.querySelectorAll('[data-expert-alt]').forEach(img => img.alt = 'Foto de ' + EXPERT.nome);
-  if (/\[/.test(Object.values(EXPERT).join(''))) console.warn('Ajuste Certo: preencha os dados da EXPERT no CONFIG antes de publicar.');
 
-  // fotos: só aparecem depois de carregar; ?slots mostra os espaços vazios
-  document.querySelectorAll('.foto img').forEach(img => {
-    const f = img.closest('.foto');
-    const ok = () => f.classList.add('com-foto');
-    if (img.complete && img.naturalWidth) ok(); else img.addEventListener('load', ok);
-  });
-  if (/[?&]slots/.test(location.search)) document.body.classList.add('mostrar-slots');
-
-  // borda numerada da base de corte
-  let b = ''; for (let i = 1; i <= 30; i++) b += '<span>' + i + '</span>';
-  $('#borda').innerHTML = b;
-
-  // depoimentos em texto (opcional)
-  if (DEPOIMENTOS.length) {
-    const lista = $('#listaDepos');
-    if (lista) {
-      DEPOIMENTOS.forEach(d => {
-        const f = document.createElement('figure'); f.className = 'depo';
-        const q = document.createElement('blockquote'); q.textContent = d.texto;
-        const c = document.createElement('figcaption');
-        const n = document.createElement('b'); n.textContent = d.nome;
-        c.append(n, document.createTextNode([d.local, d.conserto].filter(Boolean).map(x => ', ' + x).join('')));
-        f.append(q, c); lista.appendChild(f);
-      });
-    }
-  }
-
-  // carrossel minimalista de depoimentos
-  const depoTrack = $('#depoTrack');
-  if (depoTrack) {
-    const slides = depoTrack.querySelectorAll('.carrossel-slide');
-    const prevBtn = $('.carrossel-btn.prev');
-    const nextBtn = $('.carrossel-btn.next');
-    const pag = $('#depoPaginacao');
-
-    slides.forEach((_, i) => {
-      const dot = document.createElement('span');
-      dot.className = 'carrossel-dot' + (i === 0 ? ' ativo' : '');
-      dot.setAttribute('role', 'button');
-      dot.setAttribute('aria-label', 'Ir para depoimento ' + (i + 1));
-      dot.addEventListener('click', () => {
-        slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      });
-      pag.appendChild(dot);
-    });
-
-    const atualizaDots = () => {
-      const scrollLeft = depoTrack.scrollLeft;
-      const slideW = slides[0] ? slides[0].offsetWidth : 1;
-      const idx = Math.min(slides.length - 1, Math.max(0, Math.round(scrollLeft / slideW)));
-      pag.querySelectorAll('.carrossel-dot').forEach((d, i) => {
-        d.classList.toggle('ativo', i === idx);
-      });
-    };
-
-    depoTrack.addEventListener('scroll', atualizaDots, { passive: true });
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        const slideW = slides[0] ? slides[0].offsetWidth : 300;
-        depoTrack.scrollBy({ left: -slideW, behavior: 'smooth' });
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        const slideW = slides[0] ? slides[0].offsetWidth : 300;
-        depoTrack.scrollBy({ left: slideW, behavior: 'smooth' });
-      });
-    }
-  }
-
-  // termos e privacidade
-  document.querySelectorAll('[data-abre]').forEach(btn => btn.addEventListener('click', () => {
-    const d = document.getElementById(btn.dataset.abre); if (d && d.showModal) d.showModal();
+  // diálogos (termos, privacidade, zoom)
+  const abrir = id => { const d = document.getElementById(id); if (d && d.showModal) d.showModal(); };
+  document.querySelectorAll('[data-abre]').forEach(btn => btn.addEventListener('click', () => abrir(btn.dataset.abre)));
+  document.querySelectorAll('[data-zoom]').forEach(btn => btn.addEventListener('click', () => {
+    $('#zoomImg').src = btn.dataset.zoom;
+    abrir('dlgZoom');
   }));
   document.querySelectorAll('dialog').forEach(d => {
     d.querySelector('.fechar').addEventListener('click', () => d.close());
     d.addEventListener('click', e => { if (e.target === d) d.close(); });
   });
 
-  // a costura acompanha a leitura
-  const fio = $('#fio'), rodape = $('#rodape');
-  const calmo = matchMedia('(prefers-reduced-motion: reduce)');
-  let total = 0, pedido = false;
-  const medir = () => { total = Math.max(0, rodape.offsetTop - fio.offsetTop - 90); costurar(); };
-  const costurar = () => {
-    pedido = false;
-    const h = calmo.matches ? total : Math.min(total, Math.max(0, scrollY + innerHeight * 0.62 - fio.offsetTop));
-    fio.style.height = h + 'px';
-  };
-  document.body.classList.toggle('sem-mov', calmo.matches);
-  addEventListener('scroll', () => { if (!pedido) { pedido = true; requestAnimationFrame(costurar); } }, {passive:true});
-  addEventListener('resize', medir);
-  addEventListener('load', medir);
-  if (document.fonts) document.fonts.ready.then(medir);
-  medir();
+  // carrossel de depoimentos
+  const track = $('#depoTrack');
+  if (track) {
+    const slides = track.querySelectorAll('.carrossel-slide');
+    const pag = $('#depoPaginacao');
+    slides.forEach((s, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'carrossel-dot' + (i === 0 ? ' ativo' : '');
+      dot.addEventListener('click', () => track.scrollTo({ left: s.offsetLeft - track.offsetLeft, behavior: 'smooth' }));
+      pag.appendChild(dot);
+    });
+    const passo = () => slides[0].offsetWidth + 16;
+    track.addEventListener('scroll', () => {
+      const idx = Math.round(track.scrollLeft / passo());
+      pag.querySelectorAll('.carrossel-dot').forEach((d, i) => d.classList.toggle('ativo', i === idx));
+    }, { passive: true });
+    $('.carrossel-btn.prev').addEventListener('click', () => track.scrollBy({ left: -passo(), behavior: 'smooth' }));
+    $('.carrossel-btn.next').addEventListener('click', () => track.scrollBy({ left: passo(), behavior: 'smooth' }));
+  }
+
 })();
 </script>
 </body>
